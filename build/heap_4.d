@@ -1,0 +1,11 @@
+.\build\heap_4.o: FreeRTOS\portable\heap_4.c
+.\build\heap_4.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\build\heap_4.o: .\FreeRTOS\include\FreeRTOS.h
+.\build\heap_4.o: D:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\build\heap_4.o: .\FreeRTOS\include\projdefs.h
+.\build\heap_4.o: .\Application\FreeRTOSConfig.h
+.\build\heap_4.o: .\FreeRTOS\include\portable.h
+.\build\heap_4.o: .\FreeRTOS\portable\portmacro.h
+.\build\heap_4.o: .\FreeRTOS\include\mpu_wrappers.h
+.\build\heap_4.o: .\FreeRTOS\include\task.h
+.\build\heap_4.o: .\FreeRTOS\include\list.h

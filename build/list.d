@@ -1,0 +1,10 @@
+.\build\list.o: FreeRTOS\list.c
+.\build\list.o: D:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\build\list.o: .\FreeRTOS\include\FreeRTOS.h
+.\build\list.o: D:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\build\list.o: .\FreeRTOS\include\projdefs.h
+.\build\list.o: .\Application\FreeRTOSConfig.h
+.\build\list.o: .\FreeRTOS\include\portable.h
+.\build\list.o: .\FreeRTOS\portable\portmacro.h
+.\build\list.o: .\FreeRTOS\include\mpu_wrappers.h
+.\build\list.o: .\FreeRTOS\include\list.h

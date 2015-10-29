@@ -1,0 +1,27 @@
+--cpu Cortex-M4.fp
+".\build\startup_rvmdk.o"
+".\build\bsp.o"
+".\driverlib\driverlib.lib"
+".\build\timers.o"
+".\build\croutine.o"
+".\build\list.o"
+".\build\queue.o"
+".\build\tasks.o"
+".\build\port.o"
+".\build\heap_4.o"
+".\build\main.o"
+".\build\serial.o"
+".\build\osal_console.o"
+".\build\osal_utility.o"
+".\build\osal_ringbuf.o"
+".\build\osal_soft_iic.o"
+".\build\osal_timers.o"
+".\build\console_task.o"
+".\build\system_task.o"
+".\build\display_task.o"
+".\build\eprom_driver.o"
+".\build\lcd_driver.o"
+--strict --scatter ".\build\Rock700AMP.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\build\NAD_C358.map" -o .\build\NAD_C358.axf

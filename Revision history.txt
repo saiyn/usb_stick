@@ -1,0 +1,14 @@
+
+
+=================================================================
+
+Version: 0.2.0
+Date: 2015.5.21
+Author: Saiyn Chen
+----Description----
+
+1)Rebuild the whole project.
+2)This is base version which supports console system.
+ 
+-----------------------------------------------------------------
+

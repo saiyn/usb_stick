@@ -1,0 +1,207 @@
+Dependencies for Project 'Rock700AMP', Target 'Rock700AMP': (DO NOT MODIFY !)
+F (.\startup\startup_rvmdk.S)(0x555C51D8)(--cpu Cortex-M4.fp -g --apcs=interwork -I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129--list .\build\startup_rvmdk.lst --xref -o .\build\startup_rvmdk.o --depend .\build\startup_rvmdk.d)
+F (.\startup\common_head.h)(0x555C4B68)()
+F (.\startup\sys_config.h)(0x555D3E17)()
+F (.\startup\bsp.c)(0x555D39AF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\bsp.o --list_dir ".\\build\\" --list --omf_browse .\build\bsp.crf --depend .\build\bsp.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x555C4B68)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c129encpdt.h)(0x5338E628)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x555D39AF)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x555D3E17)
+I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
+F (.\driverlib\driverlib.lib)(0x552721D5)()
+F (.\FreeRTOS\timers.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\timers.o --list_dir ".\\build\\" --list --omf_browse .\build\timers.crf --depend .\build\timers.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\timers.h)(0x5480211B)
+F (.\FreeRTOS\croutine.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\croutine.o --list_dir ".\\build\\" --list --omf_browse .\build\croutine.crf --depend .\build\croutine.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\croutine.h)(0x5480211B)
+F (.\FreeRTOS\list.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\list.o --list_dir ".\\build\\" --list --omf_browse .\build\list.crf --depend .\build\list.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+F (.\FreeRTOS\queue.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\queue.o --list_dir ".\\build\\" --list --omf_browse .\build\queue.crf --depend .\build\queue.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
+F (.\FreeRTOS\tasks.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\tasks.o --list_dir ".\\build\\" --list --omf_browse .\build\tasks.crf --depend .\build\tasks.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\timers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\StackMacros.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
+F (.\FreeRTOS\portable\port.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\port.o --list_dir ".\\build\\" --list --omf_browse .\build\port.crf --depend .\build\port.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+F (.\FreeRTOS\portable\heap_4.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\heap_4.o --list_dir ".\\build\\" --list --omf_browse .\build\heap_4.crf --depend .\build\heap_4.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+F (.\Application\main.c)(0x555D39AF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\main.o --list_dir ".\\build\\" --list --omf_browse .\build\main.crf --depend .\build\main.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x555C4B68)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c129encpdt.h)(0x5338E628)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x555D39AF)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x555D3E17)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\Console_Task.h)(0x555D2CAC)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x555D3E65)
+F (.\Application\serial.c)(0x555D393E)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\serial.o --list_dir ".\\build\\" --list --omf_browse .\build\serial.crf --depend .\build\serial.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x555C4B68)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c129encpdt.h)(0x5338E628)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x555D39AF)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x555D3E17)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x555D3E65)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
+F (.\Application\OSAL_Console.c)(0x555D3E28)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\osal_console.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_console.crf --depend .\build\osal_console.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x555C4B68)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c129encpdt.h)(0x5338E628)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x555D39AF)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x555D3E17)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+F (.\Task\Console_Task.c)(0x555D42FF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C129XNCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DUSE_LWIP -DTM4C129ENCPDT-o .\build\console_task.o --list_dir ".\\build\\" --list --omf_browse .\build\console_task.crf --depend .\build\console_task.d)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x555C4B68)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c129encpdt.h)(0x5338E628)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x555D39AF)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x555D3E17)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x555D3E65)

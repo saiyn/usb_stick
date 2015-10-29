@@ -1,0 +1,627 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Project\NAD\C368\NAD_C358_RTOS\Rock700AMP.uvproj
+Project File Date:  05/21/2015
+
+<h2>Output:</h2>
+Build target 'NAD_C358'
+linking...
+Program Size: Code=14718 RO-data=2194 RW-data=100 ZI-data=52252  
+".\build\Rock700AMP.axf" - 0 Errors, 0 Warning(s).
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling timers.c...
+compiling croutine.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling port.c...
+FreeRTOS\portable\port.c(479): warning: A1581W: Added 2 bytes of padding at address 0x8e
+compiling heap_4.c...
+compiling main.c...
+Application\main.c(7): error:  #5: cannot open source input file "Console_Task.h": No such file or directory
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling Console_Task.c...
+".\build\NAD_C358.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling timers.c...
+compiling croutine.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling port.c...
+FreeRTOS\portable\port.c(479): warning: A1581W: Added 2 bytes of padding at address 0x8e
+compiling heap_4.c...
+compiling main.c...
+Application\main.c(7): error:  #5: cannot open source input file "Console_Task.h": No such file or directory
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling Console_Task.c...
+".\build\NAD_C358.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+Application\main.c(7): error:  #5: cannot open source input file "Console_Task.h": No such file or directory
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling Console_Task.c...
+".\build\NAD_C358.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling timers.c...
+compiling croutine.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling port.c...
+FreeRTOS\portable\port.c(479): warning: A1581W: Added 2 bytes of padding at address 0x8e
+compiling heap_4.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling Console_Task.c...
+linking...
+Program Size: Code=14718 RO-data=2194 RW-data=100 ZI-data=52252  
+".\build\NAD_C358.axf" - 0 Errors, 1 Warning(s).
+Build target 'NAD_C358'
+compiling main.c...
+linking...
+Program Size: Code=14710 RO-data=2194 RW-data=100 ZI-data=52252  
+".\build\NAD_C358.axf" - 0 Errors, 0 Warning(s).
+Build target 'NAD_C358'
+compiling main.c...
+linking...
+Program Size: Code=14710 RO-data=2194 RW-data=100 ZI-data=52252  
+".\build\NAD_C358.axf" - 0 Errors, 0 Warning(s).
+Build target 'NAD_C358'
+linking...
+Program Size: Code=14710 RO-data=2194 RW-data=100 ZI-data=52252  
+".\build\NAD_C358.axf" - 0 Errors, 0 Warning(s).
+Load "E:\\Project\\NAD\\C368\\NAD_C358_RTOS\\build\\NAD_C358.axf" 
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+Set JLink Project File to "E:\Project\NAD\C368\NAD_C358_RTOS\JLinkSettings.ini"
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V7 compiled Jun 20 2012 19:45:53
+Hardware: V7.00
+Feature(s) : RDI, FlashBP, FlashDL, JFlash, GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M4 r0p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: TM4C1290NCZAD
+VTarget = 3.242V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 0, TRES: 0, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling timers.c...
+compiling croutine.c...
+compiling list.c...
+compiling queue.c...
+compiling tasks.c...
+compiling port.c...
+FreeRTOS\portable\port.c(479): warning: A1581W: Added 2 bytes of padding at address 0x8e
+compiling heap_4.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_Detect.c...
+Application\OSAL_Detect.c(12): error:  #20: identifier "GPIO_ReadSinglePin" is undefined
+Application\OSAL_Detect.c(12): error:  #20: identifier "AUDIO_SENSE_PORT" is undefined
+Application\OSAL_Detect.c(12): error:  #20: identifier "AUDIO_SENSE_PIN" is undefined
+Application\OSAL_Detect.c(13): error:  #20: identifier "TRIGGER_IN_PORT" is undefined
+Application\OSAL_Detect.c(13): error:  #20: identifier "TRIGGER_IN_PIN" is undefined
+Application\OSAL_Detect.c(14): error:  #20: identifier "OVER_TEMP_PORT" is undefined
+Application\OSAL_Detect.c(14): error:  #20: identifier "OVER_TEMP_PIN" is undefined
+Application\OSAL_Detect.c(15): error:  #20: identifier "OVER_VOLTAGE_OR_SHORT_PORT" is undefined
+Application\OSAL_Detect.c(15): error:  #20: identifier "OVER_VOLTAGE_OR_SHORT_PIN" is undefined
+Application\OSAL_Detect.c(16): error:  #20: identifier "OVER_CLIP_PORT" is undefined
+Application\OSAL_Detect.c(16): error:  #20: identifier "OVER_CLIP_PIN" is undefined
+Application\OSAL_Detect.c(17): error:  #20: identifier "OVER_DC_ERROR_PORT" is undefined
+Application\OSAL_Detect.c(17): error:  #20: identifier "OVER_DC_ERROR_PIN" is undefined
+Application\OSAL_Detect.c(18): error:  #20: identifier "OVER_CURRENT_PORT" is undefined
+Application\OSAL_Detect.c(18): error:  #20: identifier "OVER_CURRENT_PIN" is undefined
+Application\OSAL_Detect.c(19): error:  #20: identifier "OVER_15V_PORT" is undefined
+Application\OSAL_Detect.c(19): error:  #20: identifier "OVER_15V_PIN" is undefined
+compiling OSAL_RingBuf.c...
+Application\OSAL_RingBuf.c(24): warning:  #223-D: function "memset" declared implicitly
+compiling OSAL_Soft_IIC.c...
+Application\OSAL_Soft_IIC.c(38): error:  #20: identifier "EPPROM_IIC_ADDRESS" is undefined
+compiling Console_Task.c...
+Task\Console_Task.c(15): warning:  #223-D: function "ring_buffer_init" declared implicitly
+compiling System_Task.c...
+Task\System_Task.c(50): error:  #20: identifier "lcd_init" is undefined
+Task\System_Task.c(51): error:  #20: identifier "dsp_boot_init" is undefined
+Task\System_Task.c(61): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(82): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_CURRENT" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_VOLTAGE" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_TEMP" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_DC_ERROR" is undefined
+Task\System_Task.c(95): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(98): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(100): warning:  #223-D: function "PCM1804_RST" declared implicitly
+Task\System_Task.c(101): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(104): warning:  #223-D: function "AMP_ENABLE" declared implicitly
+Task\System_Task.c(107): warning:  #223-D: function "AMP_MUTE_OFF" declared implicitly
+Task\System_Task.c(110): warning:  #223-D: function "RCA_OUT_DSP" declared implicitly
+Task\System_Task.c(111): warning:  #223-D: function "BAN_OUT_DSP" declared implicitly
+Task\System_Task.c(117): warning:  #223-D: function "update_all_protect_state" declared implicitly
+Task\System_Task.c(122): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(122): error:  #20: identifier "DIS_WELCOME" is undefined
+Task\System_Task.c(129): error:  #20: identifier "IS_POWER_READY" is undefined
+Task\System_Task.c(131): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(132): warning:  #223-D: function "CS4251X_Init" declared implicitly
+Task\System_Task.c(140): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(141): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(145): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(153): error:  #20: identifier "IS_OVER_CURRENT" is undefined
+Task\System_Task.c(154): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(154): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(155): error:  #20: identifier "IS_OVER_VOLTAGE" is undefined
+Task\System_Task.c(156): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(156): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(157): error:  #20: identifier "IS_OVER_TEMP" is undefined
+Task\System_Task.c(158): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(158): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(159): error:  #20: identifier "IS_DC_ERROR" is undefined
+Task\System_Task.c(160): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(160): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(169): warning:  #223-D: function "AC_STANDBY" declared implicitly
+Task\System_Task.c(170): warning:  #223-D: function "DC5V_ON" declared implicitly
+Task\System_Task.c(171): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(173): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(181): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(183): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(196): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(206): warning:  #223-D: function "RCA_OUT_BYPASS" declared implicitly
+Task\System_Task.c(207): warning:  #223-D: function "BAN_OUT_BYPASS" declared implicitly
+Task\System_Task.c(208): warning:  #223-D: function "AMP_MUTE_ON" declared implicitly
+Task\System_Task.c(210): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(212): warning:  #223-D: function "AMP_DISENABLE" declared implicitly
+Task\System_Task.c(214): warning:  #223-D: function "njw1195_channel_mute" declared implicitly
+Task\System_Task.c(216): warning:  #223-D: function "DC5V_OFF" declared implicitly
+Task\System_Task.c(217): warning:  #223-D: function "AC_STANDBY" declared implicitly
+Task\System_Task.c(218): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(231): warning:  #223-D: function "njw1195_channel_mute" declared implicitly
+Task\System_Task.c(232): warning:  #223-D: function "RCA_OUT_BYPASS" declared implicitly
+Task\System_Task.c(233): warning:  #223-D: function "BAN_OUT_BYPASS" declared implicitly
+Task\System_Task.c(234): error:  #20: identifier "SYS_LOW_POWER_FLAG_ADDRESS" is undefined
+Task\System_Task.c(234): warning:  #223-D: function "strlen" declared implicitly
+Task\System_Task.c(235): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(239): warning:  #223-D: function "WatchdogReloadSet" declared implicitly
+Task\System_Task.c(240): warning:  #223-D: function "WatchdogResetEnable" declared implicitly
+Task\System_Task.c(241): warning:  #223-D: function "WatchdogEnable" declared implicitly
+Task\System_Task.c(248): error:  #20: identifier "INT_KEY_POWER" is undefined
+Task\System_Task.c(256): error:  #20: identifier "POWER_KEY_PORT" is undefined
+Task\System_Task.c(260): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(261): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(270): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(273): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(278): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(280): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(289): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(292): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(297): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(300): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(302): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(304): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(310): error:  #20: identifier "key_value_t" is undefined
+Task\System_Task.c(314): error:  #20: identifier "KEY_POWER" is undefined
+Task\System_Task.c(323): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(327): error:  #20: identifier "KEY_POWER_LONG" is undefined
+Task\System_Task.c(334): error:  #20: identifier "cur_menu" is undefined
+Task\System_Task.c(338): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(338): error:  #20: identifier "DIS_UPDATE" is undefined
+Task\System_Task.c(347): warning:  #223-D: function "keyboard_msg_handler" declared implicitly
+Task\System_Task.c(347): error:  #20: identifier "key_value_t" is undefined
+Task\System_Task.c(347): error:  #18: expected a ")"
+Task\System_Task.c(351): error:  #18: expected a ")"
+Task\System_Task.c(373): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(374): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(375): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(377): error:  #20: identifier "POWER_ON_METHOD_DEFAULT" is undefined
+Task\System_Task.c(378): error:  #20: identifier "LCD_BRIGHTNESS_DEFAULT" is undefined
+Task\System_Task.c(380): error:  #20: identifier "LINEOUT_HIGHPASS_DEFAULT" is undefined
+compiling EPRom_driver.c...
+driver\EPRom_driver.c(1): error:  #5: cannot open source input file "sys_head.h": No such file or directory
+".\build\NAD_C358.axf" - 49 Errors, 66 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+Application\OSAL_RingBuf.c(24): warning:  #223-D: function "memset" declared implicitly
+compiling OSAL_Soft_IIC.c...
+Application\OSAL_Soft_IIC.c(38): error:  #20: identifier "EPPROM_IIC_ADDRESS" is undefined
+compiling System_Task.c...
+Task\System_Task.c(50): error:  #20: identifier "lcd_init" is undefined
+Task\System_Task.c(51): error:  #20: identifier "dsp_boot_init" is undefined
+Task\System_Task.c(61): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(82): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_CURRENT" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_VOLTAGE" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_OVER_TEMP" is undefined
+Task\System_Task.c(93): error:  #20: identifier "IS_DC_ERROR" is undefined
+Task\System_Task.c(95): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(98): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(100): warning:  #223-D: function "PCM1804_RST" declared implicitly
+Task\System_Task.c(101): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(104): warning:  #223-D: function "AMP_ENABLE" declared implicitly
+Task\System_Task.c(107): warning:  #223-D: function "AMP_MUTE_OFF" declared implicitly
+Task\System_Task.c(110): warning:  #223-D: function "RCA_OUT_DSP" declared implicitly
+Task\System_Task.c(111): warning:  #223-D: function "BAN_OUT_DSP" declared implicitly
+Task\System_Task.c(117): warning:  #223-D: function "update_all_protect_state" declared implicitly
+Task\System_Task.c(122): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(122): error:  #20: identifier "DIS_WELCOME" is undefined
+Task\System_Task.c(129): error:  #20: identifier "IS_POWER_READY" is undefined
+Task\System_Task.c(131): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(132): warning:  #223-D: function "CS4251X_Init" declared implicitly
+Task\System_Task.c(140): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(141): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(145): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(153): error:  #20: identifier "IS_OVER_CURRENT" is undefined
+Task\System_Task.c(154): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(154): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(155): error:  #20: identifier "IS_OVER_VOLTAGE" is undefined
+Task\System_Task.c(156): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(156): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(157): error:  #20: identifier "IS_OVER_TEMP" is undefined
+Task\System_Task.c(158): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(158): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(159): error:  #20: identifier "IS_DC_ERROR" is undefined
+Task\System_Task.c(160): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(160): error:  #20: identifier "DIS_JUMP" is undefined
+Task\System_Task.c(169): warning:  #223-D: function "AC_STANDBY" declared implicitly
+Task\System_Task.c(170): warning:  #223-D: function "DC5V_ON" declared implicitly
+Task\System_Task.c(171): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(173): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(181): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(183): warning:  #223-D: function "update_detect_state" declared implicitly
+Task\System_Task.c(196): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(206): warning:  #223-D: function "RCA_OUT_BYPASS" declared implicitly
+Task\System_Task.c(207): warning:  #223-D: function "BAN_OUT_BYPASS" declared implicitly
+Task\System_Task.c(208): warning:  #223-D: function "AMP_MUTE_ON" declared implicitly
+Task\System_Task.c(210): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(212): warning:  #223-D: function "AMP_DISENABLE" declared implicitly
+Task\System_Task.c(214): warning:  #223-D: function "njw1195_channel_mute" declared implicitly
+Task\System_Task.c(216): warning:  #223-D: function "DC5V_OFF" declared implicitly
+Task\System_Task.c(217): warning:  #223-D: function "AC_STANDBY" declared implicitly
+Task\System_Task.c(218): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(231): warning:  #223-D: function "njw1195_channel_mute" declared implicitly
+Task\System_Task.c(232): warning:  #223-D: function "RCA_OUT_BYPASS" declared implicitly
+Task\System_Task.c(233): warning:  #223-D: function "BAN_OUT_BYPASS" declared implicitly
+Task\System_Task.c(234): error:  #20: identifier "SYS_LOW_POWER_FLAG_ADDRESS" is undefined
+Task\System_Task.c(234): warning:  #223-D: function "strlen" declared implicitly
+Task\System_Task.c(235): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+Task\System_Task.c(239): warning:  #223-D: function "WatchdogReloadSet" declared implicitly
+Task\System_Task.c(240): warning:  #223-D: function "WatchdogResetEnable" declared implicitly
+Task\System_Task.c(241): warning:  #223-D: function "WatchdogEnable" declared implicitly
+Task\System_Task.c(248): error:  #20: identifier "INT_KEY_POWER" is undefined
+Task\System_Task.c(256): error:  #20: identifier "POWER_KEY_PORT" is undefined
+Task\System_Task.c(260): warning:  #223-D: function "sys_untimeout" declared implicitly
+Task\System_Task.c(261): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(270): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(273): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(278): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(280): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(289): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(292): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(297): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(300): warning:  #223-D: function "BLED_SET" declared implicitly
+Task\System_Task.c(302): warning:  #223-D: function "RLED_SET" declared implicitly
+Task\System_Task.c(304): warning:  #223-D: function "LED_OFF" declared implicitly
+Task\System_Task.c(310): error:  #20: identifier "key_value_t" is undefined
+Task\System_Task.c(314): error:  #20: identifier "KEY_POWER" is undefined
+Task\System_Task.c(323): warning:  #223-D: function "sys_timeout" declared implicitly
+Task\System_Task.c(327): error:  #20: identifier "KEY_POWER_LONG" is undefined
+Task\System_Task.c(334): error:  #20: identifier "cur_menu" is undefined
+Task\System_Task.c(338): warning:  #223-D: function "dis_send_msg" declared implicitly
+Task\System_Task.c(338): error:  #20: identifier "DIS_UPDATE" is undefined
+Task\System_Task.c(347): warning:  #223-D: function "keyboard_msg_handler" declared implicitly
+Task\System_Task.c(347): error:  #20: identifier "key_value_t" is undefined
+Task\System_Task.c(347): error:  #18: expected a ")"
+Task\System_Task.c(351): error:  #18: expected a ")"
+Task\System_Task.c(373): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(374): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(375): warning:  #61-D: integer operation result is out of range
+Task\System_Task.c(377): error:  #20: identifier "POWER_ON_METHOD_DEFAULT" is undefined
+Task\System_Task.c(378): error:  #20: identifier "LCD_BRIGHTNESS_DEFAULT" is undefined
+Task\System_Task.c(380): error:  #20: identifier "LINEOUT_HIGHPASS_DEFAULT" is undefined
+compiling EPRom_driver.c...
+driver\EPRom_driver.c(1): error:  #5: cannot open source input file "sys_head.h": No such file or directory
+".\build\NAD_C358.axf" - 32 Errors, 64 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+Application\OSAL_Soft_IIC.c(38): error:  #20: identifier "EPPROM_IIC_ADDRESS" is undefined
+compiling Console_Task.c...
+Task\Console_Task.c(15): warning:  #223-D: function "ring_buffer_init" declared implicitly
+compiling System_Task.c...
+Task\System_Task.c(45): warning:  #223-D: function "keyboard_msg_handler" declared implicitly
+Task\System_Task.c(49): warning:  #223-D: function "power_key_msg_handler" declared implicitly
+Task\System_Task.c(57): warning:  #223-D: function "sys_code_pass_handler" declared implicitly
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+driver\EPRom_driver.c(1): error:  #5: cannot open source input file "sys_head.h": No such file or directory
+".\build\NAD_C358.axf" - 2 Errors, 8 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+compiling Console_Task.c...
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+driver\EPRom_driver.c(1): error:  #5: cannot open source input file "sys_head.h": No such file or directory
+".\build\NAD_C358.axf" - 1 Errors, 4 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+compiling Console_Task.c...
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+linking...
+.\build\NAD_C358.axf: Error: L6218E: Undefined symbol ir_front (referred from osal_ringbuf.o).
+.\build\NAD_C358.axf: Error: L6218E: Undefined symbol ir_in (referred from osal_ringbuf.o).
+.\build\NAD_C358.axf: Error: L6218E: Undefined symbol GPIO_ReadSinglePin (referred from eprom_driver.o).
+.\build\NAD_C358.axf: Error: L6218E: Undefined symbol bsp_delay_ms (referred from eprom_driver.o).
+".\build\NAD_C358.axf" - 4 Errors, 4 Warning(s).
+Target not created
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+compiling Console_Task.c...
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+linking...
+Program Size: Code=20294 RO-data=3282 RW-data=132 ZI-data=52332  
+".\build\NAD_C358.axf" - 0 Errors, 4 Warning(s).
+Build target 'NAD_C358'
+linking...
+Program Size: Code=20294 RO-data=3282 RW-data=132 ZI-data=52332  
+".\build\NAD_C358.axf" - 0 Errors, 0 Warning(s).
+Load "E:\\Project\\NAD\\C368\\NAD_C358_RTOS\\build\\NAD_C358.axf" 
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+Set JLink Project File to "E:\Project\NAD\C368\NAD_C358_RTOS\JLinkSettings.ini"
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V7 compiled Jun 20 2012 19:45:53
+Hardware: V7.00
+Feature(s) : RDI, FlashBP, FlashDL, JFlash, GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M4 r0p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: TM4C1290NCZAD
+VTarget = 3.248V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 0, TRES: 0, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'NAD_C358'
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+linking...
+Program Size: Code=20306 RO-data=3282 RW-data=132 ZI-data=52332  
+".\build\NAD_C358.axf" - 0 Errors, 4 Warning(s).
+Load "E:\\Project\\NAD\\C368\\NAD_C358_RTOS\\build\\NAD_C358.axf" 
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+Set JLink Project File to "E:\Project\NAD\C368\NAD_C358_RTOS\JLinkSettings.ini"
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V7 compiled Jun 20 2012 19:45:53
+Hardware: V7.00
+Feature(s) : RDI, FlashBP, FlashDL, JFlash, GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M4 r0p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: TM4C1290NCZAD
+VTarget = 3.242V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 0, TRES: 0, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+compiling Console_Task.c...
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+linking...
+Program Size: Code=20306 RO-data=3282 RW-data=132 ZI-data=52332  
+".\build\NAD_C358.axf" - 0 Errors, 4 Warning(s).
+Load "E:\\Project\\NAD\\C368\\NAD_C358_RTOS\\build\\NAD_C358.axf" 
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+Set JLink Project File to "E:\Project\NAD\C368\NAD_C358_RTOS\JLinkSettings.ini"
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V7 compiled Jun 20 2012 19:45:53
+Hardware: V7.00
+Feature(s) : RDI, FlashBP, FlashDL, JFlash, GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M4 r0p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: TM4C1290NCZAD
+VTarget = 3.242V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 0, TRES: 0, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'NAD_C358'
+compiling bsp.c...
+compiling main.c...
+compiling serial.c...
+compiling OSAL_Console.c...
+compiling OSAL_Utility.c...
+compiling OSAL_RingBuf.c...
+compiling OSAL_Soft_IIC.c...
+compiling Console_Task.c...
+compiling System_Task.c...
+Task\System_Task.c(20): warning:  #177-D: variable "protect_name" was declared but never referenced
+Task\System_Task.c(32): warning:  #177-D: function "sys_audio_config_load" was declared but never referenced
+Task\System_Task.c(33): warning:  #177-D: function "sys_bled_flash" was declared but never referenced
+Task\System_Task.c(34): warning:  #177-D: function "power_on_timeout" was declared but never referenced
+compiling EPRom_driver.c...
+linking...
+Program Size: Code=20306 RO-data=3282 RW-data=132 ZI-data=52332  
+".\build\NAD_C358.axf" - 0 Errors, 4 Warning(s).
+Load "E:\\Project\\NAD\\C368\\NAD_C358_RTOS\\build\\NAD_C358.axf" 
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+Set JLink Project File to "E:\Project\NAD\C368\NAD_C358_RTOS\JLinkSettings.ini"
+* JLink Info: Device "UNSPECIFIED" selected (0 KB flash, 0 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V7 compiled Jun 20 2012 19:45:53
+Hardware: V7.00
+Feature(s) : RDI, FlashBP, FlashDL, JFlash, GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M4 r0p1, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: TM4C1290NCZAD
+VTarget = 3.242V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 0, TRES: 0, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
