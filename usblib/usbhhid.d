@@ -1,0 +1,11 @@
+.\usbhhid.o: host\usbhhid.c
+.\usbhhid.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhhid.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhhid.o: ..\inc/hw_types.h
+.\usbhhid.o: ..\driverlib/usb.h
+.\usbhhid.o: ..\usblib/usblib.h
+.\usbhhid.o: ..\usblib/usblibpriv.h
+.\usbhhid.o: ..\usblib/usbhid.h
+.\usbhhid.o: ..\usblib/host/usbhost.h
+.\usbhhid.o: ..\usblib/host/usbhostpriv.h
+.\usbhhid.o: ..\usblib/host/usbhhid.h

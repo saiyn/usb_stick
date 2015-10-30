@@ -15,6 +15,7 @@
 .\build\lcd_driver.o: .\inc\hw_types.h
 .\build\lcd_driver.o: .\inc\hw_gpio.h
 .\build\lcd_driver.o: .\inc\hw_ssi.h
+.\build\lcd_driver.o: .\driverlib\udma.h
 .\build\lcd_driver.o: .\driverlib\interrupt.h
 .\build\lcd_driver.o: .\inc\tm4c1290nczad.h
 .\build\lcd_driver.o: .\startup\sys_database.h

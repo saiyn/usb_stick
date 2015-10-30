@@ -15,6 +15,7 @@
 .\build\eprom_driver.o: .\inc\hw_types.h
 .\build\eprom_driver.o: .\inc\hw_gpio.h
 .\build\eprom_driver.o: .\inc\hw_ssi.h
+.\build\eprom_driver.o: .\driverlib\udma.h
 .\build\eprom_driver.o: .\driverlib\interrupt.h
 .\build\eprom_driver.o: .\inc\tm4c1290nczad.h
 .\build\eprom_driver.o: .\startup\sys_database.h

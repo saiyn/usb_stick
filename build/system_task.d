@@ -15,6 +15,7 @@
 .\build\system_task.o: .\inc\hw_types.h
 .\build\system_task.o: .\inc\hw_gpio.h
 .\build\system_task.o: .\inc\hw_ssi.h
+.\build\system_task.o: .\driverlib\udma.h
 .\build\system_task.o: .\driverlib\interrupt.h
 .\build\system_task.o: .\inc\tm4c1290nczad.h
 .\build\system_task.o: .\startup\sys_database.h
@@ -40,3 +41,4 @@
 .\build\system_task.o: .\driver\lcd_driver.h
 .\build\system_task.o: Task\Display_Task.h
 .\build\system_task.o: .\Application\osal_timers.h
+.\build\system_task.o: .\Application\usb_stick.h

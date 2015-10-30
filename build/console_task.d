@@ -15,6 +15,7 @@
 .\build\console_task.o: .\inc\hw_types.h
 .\build\console_task.o: .\inc\hw_gpio.h
 .\build\console_task.o: .\inc\hw_ssi.h
+.\build\console_task.o: .\driverlib\udma.h
 .\build\console_task.o: .\driverlib\interrupt.h
 .\build\console_task.o: .\inc\tm4c1290nczad.h
 .\build\console_task.o: .\startup\sys_database.h

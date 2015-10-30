@@ -15,6 +15,7 @@
 .\build\bsp.o: .\inc\hw_types.h
 .\build\bsp.o: .\inc\hw_gpio.h
 .\build\bsp.o: .\inc\hw_ssi.h
+.\build\bsp.o: .\driverlib\udma.h
 .\build\bsp.o: .\driverlib\interrupt.h
 .\build\bsp.o: .\inc\tm4c1290nczad.h
 .\build\bsp.o: startup\sys_database.h

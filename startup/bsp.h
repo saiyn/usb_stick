@@ -206,7 +206,14 @@
 #define LEDB_PORT        GPIO_PORTQ_BASE
 #define LEDB_PIN         GPIO_PIN_2
 
+/*usb*/
+#define USB_EN_PORT      GPIO_PORTQ_BASE
+#define USB_EN_PIN       GPIO_PIN_4
+#define USB_SELECT_PORT  GPIO_PORTP_BASE
+#define USB_SELECT_PIN   GPIO_PIN_2
 
+#define USB_SWITCH_TO_MCU  GPIO_PIN_SET(USB_SELECT_PORT, USB_SELECT_PIN, 1)
+#define USB_SWITCH_TO_MDC  GPIO_PIN_SET(USB_SELECT_PORT, USB_SELECT_PIN, 0)
 
 #define GPIO_PIN_SET(port,pin,value) do{ \
 	if(value){ \

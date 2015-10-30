@@ -1,0 +1,12 @@
+.\usbhmsc.o: host\usbhmsc.c
+.\usbhmsc.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhmsc.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhmsc.o: ..\inc/hw_types.h
+.\usbhmsc.o: ..\driverlib/usb.h
+.\usbhmsc.o: ..\usblib/usblib.h
+.\usbhmsc.o: ..\usblib/usblibpriv.h
+.\usbhmsc.o: ..\usblib/usbmsc.h
+.\usbhmsc.o: ..\usblib/host/usbhost.h
+.\usbhmsc.o: ..\usblib/host/usbhostpriv.h
+.\usbhmsc.o: ..\usblib/host/usbhmsc.h
+.\usbhmsc.o: ..\usblib/host/usbhscsi.h

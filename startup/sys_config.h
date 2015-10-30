@@ -57,6 +57,7 @@ if(!(x)){\
 
 #define IIC_DRIVER_DEBUG    SYS_DEBUG_ON
 
+#define USB_STICK_DEBUG     SYS_DEBUG_ON
 
 #endif
 

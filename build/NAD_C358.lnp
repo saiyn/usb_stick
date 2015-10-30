@@ -21,6 +21,9 @@
 ".\build\display_task.o"
 ".\build\eprom_driver.o"
 ".\build\lcd_driver.o"
+".\usblib\usblib.lib"
+".\build\simple_fs.o"
+".\build\usb_stick.o"
 --strict --scatter ".\build\Rock700AMP.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -15,6 +15,7 @@
 .\build\display_task.o: .\inc\hw_types.h
 .\build\display_task.o: .\inc\hw_gpio.h
 .\build\display_task.o: .\inc\hw_ssi.h
+.\build\display_task.o: .\driverlib\udma.h
 .\build\display_task.o: .\driverlib\interrupt.h
 .\build\display_task.o: .\inc\tm4c1290nczad.h
 .\build\display_task.o: .\startup\sys_database.h

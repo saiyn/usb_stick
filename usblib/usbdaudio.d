@@ -1,0 +1,15 @@
+.\usbdaudio.o: device\usbdaudio.c
+.\usbdaudio.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdaudio.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdaudio.o: ..\inc/hw_memmap.h
+.\usbdaudio.o: ..\inc/hw_types.h
+.\usbdaudio.o: ..\driverlib/debug.h
+.\usbdaudio.o: ..\driverlib/rom.h
+.\usbdaudio.o: ..\driverlib/rom_map.h
+.\usbdaudio.o: ..\driverlib/usb.h
+.\usbdaudio.o: ..\usblib/usblib.h
+.\usbdaudio.o: ..\usblib/usblibpriv.h
+.\usbdaudio.o: ..\usblib/usbaudio.h
+.\usbdaudio.o: ..\usblib/device/usbdevice.h
+.\usbdaudio.o: ..\usblib/device/usbdevicepriv.h
+.\usbdaudio.o: ..\usblib/device/usbdaudio.h

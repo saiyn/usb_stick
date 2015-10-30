@@ -15,6 +15,7 @@
 .\build\serial.o: .\inc\hw_types.h
 .\build\serial.o: .\inc\hw_gpio.h
 .\build\serial.o: .\inc\hw_ssi.h
+.\build\serial.o: .\driverlib\udma.h
 .\build\serial.o: .\driverlib\interrupt.h
 .\build\serial.o: .\inc\tm4c1290nczad.h
 .\build\serial.o: .\startup\sys_database.h

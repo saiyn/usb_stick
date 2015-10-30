@@ -1,0 +1,11 @@
+.\usbdconfig.o: device\usbdconfig.c
+.\usbdconfig.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdconfig.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdconfig.o: ..\inc/hw_memmap.h
+.\usbdconfig.o: ..\inc/hw_types.h
+.\usbdconfig.o: ..\driverlib/debug.h
+.\usbdconfig.o: ..\driverlib/usb.h
+.\usbdconfig.o: ..\usblib/usblib.h
+.\usbdconfig.o: ..\usblib/usblibpriv.h
+.\usbdconfig.o: ..\usblib/device/usbdevice.h
+.\usbdconfig.o: ..\usblib/device/usbdevicepriv.h

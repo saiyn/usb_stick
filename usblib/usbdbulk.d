@@ -1,0 +1,15 @@
+.\usbdbulk.o: device\usbdbulk.c
+.\usbdbulk.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdbulk.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdbulk.o: ..\inc/hw_memmap.h
+.\usbdbulk.o: ..\inc/hw_types.h
+.\usbdbulk.o: ..\driverlib/debug.h
+.\usbdbulk.o: ..\driverlib/rom.h
+.\usbdbulk.o: ..\driverlib/rom_map.h
+.\usbdbulk.o: ..\driverlib/usb.h
+.\usbdbulk.o: ..\usblib/usblib.h
+.\usbdbulk.o: ..\usblib/usblibpriv.h
+.\usbdbulk.o: ..\usblib/device/usbdevice.h
+.\usbdbulk.o: ..\usblib/device/usbdevicepriv.h
+.\usbdbulk.o: ..\usblib/device/usbdbulk.h
+.\usbdbulk.o: ..\usblib/device/usbdcomp.h

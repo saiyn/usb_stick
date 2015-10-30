@@ -1,0 +1,9 @@
+.\usbhscsi.o: host\usbhscsi.c
+.\usbhscsi.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhscsi.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhscsi.o: ..\inc/hw_types.h
+.\usbhscsi.o: ..\usblib/usblib.h
+.\usbhscsi.o: ..\usblib/usbmsc.h
+.\usbhscsi.o: ..\usblib/host/usbhost.h
+.\usbhscsi.o: ..\usblib/host/usbhmsc.h
+.\usbhscsi.o: ..\usblib/host/usbhscsi.h

@@ -8,6 +8,7 @@
 #include "serial.h"
 #include "System_Task.h"
 #include "Display_Task.h"
+#include "usb_stick.h"
 
 const char *version = "v0.0.1";
 
@@ -35,6 +36,7 @@ int main(void)
   xTaskCreate(console_task,(const signed char *)"Console", (configMINIMAL_STACK_SIZE*2), NULL, 2, NULL);
 	xTaskCreate(system_task,(const signed char *)"System", (configMINIMAL_STACK_SIZE*2), NULL, 9, NULL);
 	xTaskCreate(display_task,(const signed char *)"display", (configMINIMAL_STACK_SIZE*2), NULL, 8, NULL);
+	xTaskCreate(usb_stick_task,(const signed char *)"usb_stick", (configMINIMAL_STACK_SIZE*2), NULL, 7, NULL);
 	// Start the scheduler
 	vTaskStartScheduler();
 	return 0;

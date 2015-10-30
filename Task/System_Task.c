@@ -13,7 +13,7 @@
 #include "lcd_driver.h"
 #include "Display_Task.h"
 #include "osal_timers.h"
-
+#include "usb_stick.h"
 
 xQueueHandle gSysQueue;
 
@@ -405,9 +405,27 @@ OSAL_CMD(sort, 1, sort_list, "leet code test");
 
 
 
+int usb_init(struct cmd_tbl_s *cmdtp, int argc, char * const argv[])
+{
+		
+	USB_SWITCH_TO_MCU;
+	
+  usb_send_msg(USB_INTERFACE_CONFIG);
 
+	return 0;
+}
 
+OSAL_CMD(usbi, 1, usb_init, "init usb");
 
+int usb_start(struct cmd_tbl_s *cmdtp, int argc, char * const argv[])
+{
+		
+  usb_send_msg(USB_HOST_READY);
+
+	return 0;
+}
+
+OSAL_CMD(usbs, 1, usb_start, "start usb");
 
 
 

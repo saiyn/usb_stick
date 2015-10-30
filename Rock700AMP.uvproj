@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>rvmdk PART_TM4C1290NCZAD RTOS_FREERTOS  TARGET_IS_SNOWFLAKE_RA0</Define>
               <Undefine></Undefine>
-              <IncludePath>.\FreeRTOS\include;.\inc;.\startup;.\driverlib;.\Application;.\FreeRTOS\portable;.\Task;.\driver</IncludePath>
+              <IncludePath>.\FreeRTOS\include;.\inc;.\startup;.\driverlib;.\Application;.\FreeRTOS\portable;.\Task;.\driver;.\usblib</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -546,6 +546,26 @@
               <FileName>lcd_driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\driver\lcd_driver.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>usblib</GroupName>
+          <Files>
+            <File>
+              <FileName>usblib.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\usblib\usblib.lib</FilePath>
+            </File>
+            <File>
+              <FileName>simple_fs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\simple_fs.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_stick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\usb_stick.c</FilePath>
             </File>
           </Files>
         </Group>

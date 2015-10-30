@@ -1,0 +1,11 @@
+.\usbhaudio.o: host\usbhaudio.c
+.\usbhaudio.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhaudio.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhaudio.o: ..\inc/hw_types.h
+.\usbhaudio.o: ..\driverlib/usb.h
+.\usbhaudio.o: ..\usblib/usblib.h
+.\usbhaudio.o: ..\usblib/usblibpriv.h
+.\usbhaudio.o: ..\usblib/usbaudio.h
+.\usbhaudio.o: ..\usblib/host/usbhost.h
+.\usbhaudio.o: ..\usblib/host/usbhostpriv.h
+.\usbhaudio.o: ..\usblib/host/usbhaudio.h

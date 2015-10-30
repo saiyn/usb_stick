@@ -1,0 +1,9 @@
+.\usbhhidmouse.o: host\usbhhidmouse.c
+.\usbhhidmouse.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhhidmouse.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhhidmouse.o: ..\inc/hw_types.h
+.\usbhhidmouse.o: ..\usblib/usblib.h
+.\usbhhidmouse.o: ..\usblib/host/usbhost.h
+.\usbhhidmouse.o: ..\usblib/usbhid.h
+.\usbhhidmouse.o: ..\usblib/host/usbhhid.h
+.\usbhhidmouse.o: ..\usblib/host/usbhhidmouse.h

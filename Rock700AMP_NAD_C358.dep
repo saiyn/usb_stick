@@ -2,465 +2,472 @@ Dependencies for Project 'Rock700AMP', Target 'NAD_C358': (DO NOT MODIFY !)
 F (.\startup\startup_rvmdk.S)(0x555C51D8)(--cpu Cortex-M4.fp -g --apcs=interwork -I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129--list .\build\startup_rvmdk.lst --xref -o .\build\startup_rvmdk.o --depend .\build\startup_rvmdk.d)
 F (.\startup\common_head.h)(0x55F39A8C)()
 F (.\startup\sys_config.h)(0x55F3A0BF)()
-F (.\startup\bsp.c)(0x55C81349)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\bsp.o --list_dir ".\\build\\" --list --omf_browse .\build\bsp.crf --depend .\build\bsp.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+F (.\startup\bsp.c)(0x55C81349)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\bsp.o --list_dir ".\\build\\" --list --omf_browse .\build\bsp.crf --depend .\build\bsp.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
 F (.\startup\sys_database.h)(0x55BAE26D)()
 F (.\startup\bsp.h)(0x55B9D908)()
 F (.\driverlib\driverlib.lib)(0x552721D5)()
-F (.\FreeRTOS\timers.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\timers.o --list_dir ".\\build\\" --list --omf_browse .\build\timers.crf --depend .\build\timers.d)
+F (.\FreeRTOS\timers.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\timers.o --list_dir ".\\build\\" --list --omf_browse .\build\timers.crf --depend .\build\timers.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\timers.h)(0x5480211B)
-F (.\FreeRTOS\croutine.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\croutine.o --list_dir ".\\build\\" --list --omf_browse .\build\croutine.crf --depend .\build\croutine.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\timers.h)(0x5480211B)
+F (.\FreeRTOS\croutine.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\croutine.o --list_dir ".\\build\\" --list --omf_browse .\build\croutine.crf --depend .\build\croutine.d)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\croutine.h)(0x5480211B)
-F (.\FreeRTOS\list.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\list.o --list_dir ".\\build\\" --list --omf_browse .\build\list.crf --depend .\build\list.d)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\croutine.h)(0x5480211B)
+F (.\FreeRTOS\list.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\list.o --list_dir ".\\build\\" --list --omf_browse .\build\list.crf --depend .\build\list.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-F (.\FreeRTOS\queue.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\queue.o --list_dir ".\\build\\" --list --omf_browse .\build\queue.crf --depend .\build\queue.d)
-I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
-I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
-I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-F (.\FreeRTOS\tasks.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\tasks.o --list_dir ".\\build\\" --list --omf_browse .\build\tasks.crf --depend .\build\tasks.d)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+F (.\FreeRTOS\queue.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\queue.o --list_dir ".\\build\\" --list --omf_browse .\build\queue.crf --depend .\build\queue.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\timers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\StackMacros.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+F (.\FreeRTOS\tasks.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\tasks.o --list_dir ".\\build\\" --list --omf_browse .\build\tasks.crf --depend .\build\tasks.d)
+I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\timers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\StackMacros.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-F (.\FreeRTOS\portable\port.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\port.o --list_dir ".\\build\\" --list --omf_browse .\build\port.crf --depend .\build\port.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+F (.\FreeRTOS\portable\port.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\port.o --list_dir ".\\build\\" --list --omf_browse .\build\port.crf --depend .\build\port.d)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-F (.\FreeRTOS\portable\heap_4.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\heap_4.o --list_dir ".\\build\\" --list --omf_browse .\build\heap_4.crf --depend .\build\heap_4.d)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+F (.\FreeRTOS\portable\heap_4.c)(0x5480211B)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\heap_4.o --list_dir ".\\build\\" --list --omf_browse .\build\heap_4.crf --depend .\build\heap_4.d)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-F (.\Application\main.c)(0x55EFCFEA)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\main.o --list_dir ".\\build\\" --list --omf_browse .\build\main.crf --depend .\build\main.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+F (.\Application\main.c)(0x55EFCFEA)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\main.o --list_dir ".\\build\\" --list --omf_browse .\build\main.crf --depend .\build\main.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\Console_Task.h)(0x555D2CAC)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x55750980)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\System_Task.h)(0x55F14A1E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\Display_Task.h)(0x55EFCD75)
-F (.\Application\serial.c)(0x55C812A2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\serial.o --list_dir ".\\build\\" --list --omf_browse .\build\serial.crf --depend .\build\serial.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Task\Console_Task.h)(0x555D2CAC)
+I (E:\Project\Git\usb_stick\Application\serial.h)(0x55750980)
+I (E:\Project\Git\usb_stick\Task\System_Task.h)(0x55F14A1E)
+I (E:\Project\Git\usb_stick\Task\Display_Task.h)(0x55EFCD75)
+F (.\Application\serial.c)(0x55C812A2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\serial.o --list_dir ".\\build\\" --list --omf_browse .\build\serial.crf --depend .\build\serial.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_RingBuf.h)(0x55750903)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x55750980)
-F (.\Application\OSAL_Console.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_console.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_console.crf --depend .\build\osal_console.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\Git\usb_stick\Application\OSAL_RingBuf.h)(0x55750903)
+I (E:\Project\Git\usb_stick\Application\serial.h)(0x55750980)
+F (.\Application\OSAL_Console.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_console.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_console.crf --depend .\build\osal_console.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-F (.\Application\OSAL_Utility.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_utility.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_utility.crf --depend .\build\osal_utility.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+F (.\Application\OSAL_Utility.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_utility.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_utility.crf --depend .\build\osal_utility.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-F (.\Application\OSAL_RingBuf.c)(0x55BADFBB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_ringbuf.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_ringbuf.crf --depend .\build\osal_ringbuf.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+F (.\Application\OSAL_RingBuf.c)(0x55BADFBB)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_ringbuf.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_ringbuf.crf --depend .\build\osal_ringbuf.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_RingBuf.h)(0x55750903)
-F (.\Application\OSAL_Soft_IIC.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_soft_iic.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_soft_iic.crf --depend .\build\osal_soft_iic.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\Application\OSAL_RingBuf.h)(0x55750903)
+F (.\Application\OSAL_Soft_IIC.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_soft_iic.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_soft_iic.crf --depend .\build\osal_soft_iic.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Soft_IIC.h)(0x55668D61)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\EPRom_driver.h)(0x55668233)
-F (.\Application\osal_timers.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_timers.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_timers.crf --depend .\build\osal_timers.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\Application\OSAL_Soft_IIC.h)(0x55668D61)
+I (E:\Project\Git\usb_stick\driver\EPRom_driver.h)(0x55668233)
+F (.\Application\osal_timers.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\osal_timers.o --list_dir ".\\build\\" --list --omf_browse .\build\osal_timers.crf --depend .\build\osal_timers.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\osal_timers.h)(0x55F14AE4)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\Application\osal_timers.h)(0x55F14AE4)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\System_Task.h)(0x55F14A1E)
-F (.\Task\Console_Task.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\console_task.o --list_dir ".\\build\\" --list --omf_browse .\build\console_task.crf --depend .\build\console_task.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Task\System_Task.h)(0x55F14A1E)
+F (.\Task\Console_Task.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\console_task.o --list_dir ".\\build\\" --list --omf_browse .\build\console_task.crf --depend .\build\console_task.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x55750980)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_RingBuf.h)(0x55750903)
-F (.\Task\System_Task.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\system_task.o --list_dir ".\\build\\" --list --omf_browse .\build\system_task.crf --depend .\build\system_task.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\Git\usb_stick\Application\serial.h)(0x55750980)
+I (E:\Project\Git\usb_stick\Application\OSAL_RingBuf.h)(0x55750903)
+F (.\Task\System_Task.c)(0x56308926)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\system_task.o --list_dir ".\\build\\" --list --omf_browse .\build\system_task.crf --depend .\build\system_task.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\serial.h)(0x55750980)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\System_Task.h)(0x55F14A1E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\EPRom_driver.h)(0x55668233)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Utility.h)(0x551BA6BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_RingBuf.h)(0x55750903)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\lcd_driver.h)(0x55BB1537)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\Display_Task.h)(0x55EFCD75)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\osal_timers.h)(0x55F14AE4)
-F (.\Task\Display_Task.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\display_task.o --list_dir ".\\build\\" --list --omf_browse .\build\display_task.crf --depend .\build\display_task.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\Git\usb_stick\Application\serial.h)(0x55750980)
+I (E:\Project\Git\usb_stick\Task\System_Task.h)(0x55F14A1E)
+I (E:\Project\Git\usb_stick\driver\EPRom_driver.h)(0x55668233)
+I (E:\Project\Git\usb_stick\Application\OSAL_Utility.h)(0x551BA6BF)
+I (E:\Project\Git\usb_stick\Application\OSAL_RingBuf.h)(0x55750903)
+I (E:\Project\Git\usb_stick\driver\lcd_driver.h)(0x55BB1537)
+I (E:\Project\Git\usb_stick\Task\Display_Task.h)(0x55EFCD75)
+I (E:\Project\Git\usb_stick\Application\osal_timers.h)(0x55F14AE4)
+F (.\Task\Display_Task.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\display_task.o --list_dir ".\\build\\" --list --omf_browse .\build\display_task.crf --depend .\build\display_task.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\FreeRTOS.h)(0x5480211B)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\projdefs.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\FreeRTOSConfig.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\portable.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\portable\portmacro.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\task.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\list.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\queue.h)(0x5487992E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\FreeRTOS\include\semphr.h)(0x5480211B)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\Display_Task.h)(0x55EFCD75)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Task\System_Task.h)(0x55F14A1E)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\Lcd_driver.h)(0x55BB1537)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\osal_timers.h)(0x55F14AE4)
-F (.\driver\EPRom_driver.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\eprom_driver.o --list_dir ".\\build\\" --list --omf_browse .\build\eprom_driver.crf --depend .\build\eprom_driver.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\projdefs.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Application\FreeRTOSConfig.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\portable.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\portable\portmacro.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\mpu_wrappers.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\task.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\list.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\queue.h)(0x5487992E)
+I (E:\Project\Git\usb_stick\FreeRTOS\include\semphr.h)(0x5480211B)
+I (E:\Project\Git\usb_stick\Task\Display_Task.h)(0x55EFCD75)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\Git\usb_stick\Task\System_Task.h)(0x55F14A1E)
+I (E:\Project\Git\usb_stick\driver\Lcd_driver.h)(0x55BB1537)
+I (E:\Project\Git\usb_stick\Application\osal_timers.h)(0x55F14AE4)
+F (.\driver\EPRom_driver.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\eprom_driver.o --list_dir ".\\build\\" --list --omf_browse .\build\eprom_driver.crf --depend .\build\eprom_driver.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\EPRom_driver.h)(0x55668233)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Soft_IIC.h)(0x55668D61)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
-F (.\driver\lcd_driver.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\lcd_driver.o --list_dir ".\\build\\" --list --omf_browse .\build\lcd_driver.crf --depend .\build\lcd_driver.d)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\common_head.h)(0x55F39A8C)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\driver\EPRom_driver.h)(0x55668233)
+I (E:\Project\Git\usb_stick\Application\OSAL_Soft_IIC.h)(0x55668D61)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+F (.\driver\lcd_driver.c)(0x55F3A0BF)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --asm --interleave --asm_dir ".\\build\\" -I.\FreeRTOS\include -I.\inc -I.\startup -I.\driverlib -I.\Application -I.\FreeRTOS\portable -I.\Task -I.\driver -I.\usblib-I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1290NCZAD -DRTOS_FREERTOS -DTARGET_IS_SNOWFLAKE_RA0 -DTM4C1290NCZAD-o .\build\lcd_driver.o --list_dir ".\\build\\" --list --omf_browse .\build\lcd_driver.crf --depend .\build\lcd_driver.d)
+I (E:\Project\Git\usb_stick\startup\common_head.h)(0x55F39A8C)
 I (D:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\sysctl.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\pin_map.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\gpio.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\uart.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\adc.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\ssi.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_memmap.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_types.h)(0x533BBEAE)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_gpio.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\hw_ssi.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driverlib\interrupt.h)(0x5338E614)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\inc\tm4c1290nczad.h)(0x5338E627)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_database.h)(0x55BAE26D)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\bsp.h)(0x55B9D908)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\startup\sys_config.h)(0x55F3A0BF)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\driver\lcd_driver.h)(0x55BB1537)
-I (E:\Project\NAD\C368\NAD_C358_RTOS\Application\OSAL_Console.h)(0x5530ECC9)
+I (E:\Project\Git\usb_stick\driverlib\sysctl.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\pin_map.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\gpio.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\uart.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\adc.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\driverlib\ssi.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\hw_memmap.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_types.h)(0x533BBEAE)
+I (E:\Project\Git\usb_stick\inc\hw_gpio.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\inc\hw_ssi.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\driverlib\interrupt.h)(0x5338E614)
+I (E:\Project\Git\usb_stick\inc\tm4c1290nczad.h)(0x5338E627)
+I (E:\Project\Git\usb_stick\startup\sys_database.h)(0x55BAE26D)
+I (E:\Project\Git\usb_stick\startup\bsp.h)(0x55B9D908)
+I (E:\Project\Git\usb_stick\startup\sys_config.h)(0x55F3A0BF)
+I (E:\Project\Git\usb_stick\driver\lcd_driver.h)(0x55BB1537)
+I (E:\Project\Git\usb_stick\Application\OSAL_Console.h)(0x5530ECC9)
+F (.\usblib\usblib.lib)(0x5490D434)()
+F (.\Application\simple_fs.c)(0x5338E61F)()
+I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C7B744)
+I (D:\Keil\ARM\ARMCC\include\string.h)(0x51C7B744)
+I (E:\Project\Git\usb_stick\Application\simple_fs.h)(0x5338E61F)
+F (.\Application\usb_stick.c)(0x5632C4BE)()

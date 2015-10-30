@@ -1,0 +1,13 @@
+.\usbdhidmouse.o: device\usbdhidmouse.c
+.\usbdhidmouse.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdhidmouse.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdhidmouse.o: ..\inc/hw_types.h
+.\usbdhidmouse.o: ..\driverlib/debug.h
+.\usbdhidmouse.o: ..\driverlib/usb.h
+.\usbdhidmouse.o: ..\usblib/usblib.h
+.\usbdhidmouse.o: ..\usblib/usblibpriv.h
+.\usbdhidmouse.o: ..\usblib/device/usbdevice.h
+.\usbdhidmouse.o: ..\usblib/device/usbdevicepriv.h
+.\usbdhidmouse.o: ..\usblib/usbhid.h
+.\usbdhidmouse.o: ..\usblib/device/usbdhid.h
+.\usbdhidmouse.o: ..\usblib/device/usbdhidmouse.h

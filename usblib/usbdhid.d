@@ -1,0 +1,15 @@
+.\usbdhid.o: device\usbdhid.c
+.\usbdhid.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdhid.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdhid.o: ..\inc/hw_memmap.h
+.\usbdhid.o: ..\inc/hw_types.h
+.\usbdhid.o: ..\driverlib/debug.h
+.\usbdhid.o: ..\driverlib/usb.h
+.\usbdhid.o: ..\driverlib/rom.h
+.\usbdhid.o: ..\driverlib/rom_map.h
+.\usbdhid.o: ..\usblib/usblib.h
+.\usbdhid.o: ..\usblib/usblibpriv.h
+.\usbdhid.o: ..\usblib/usbhid.h
+.\usbdhid.o: ..\usblib/device/usbdevice.h
+.\usbdhid.o: ..\usblib/device/usbdevicepriv.h
+.\usbdhid.o: ..\usblib/device/usbdhid.h

@@ -1,0 +1,14 @@
+.\usbhhub.o: host\usbhhub.c
+.\usbhhub.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbhhub.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbhhub.o: ..\inc/hw_types.h
+.\usbhhub.o: ..\inc/hw_ints.h
+.\usbhhub.o: ..\inc/hw_sysctl.h
+.\usbhhub.o: ..\driverlib/usb.h
+.\usbhhub.o: ..\driverlib/interrupt.h
+.\usbhhub.o: ..\driverlib/rom_map.h
+.\usbhhub.o: ..\driverlib/rtos_bindings.h
+.\usbhhub.o: ..\usblib/usblib.h
+.\usbhhub.o: ..\usblib/host/usbhost.h
+.\usbhhub.o: ..\usblib/host/usbhostpriv.h
+.\usbhhub.o: ..\usblib/host/usbhhub.h

@@ -1,0 +1,12 @@
+.\usbdhandler.o: device\usbdhandler.c
+.\usbdhandler.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdhandler.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdhandler.o: ..\inc/hw_memmap.h
+.\usbdhandler.o: ..\inc/hw_types.h
+.\usbdhandler.o: ..\driverlib/rom.h
+.\usbdhandler.o: ..\driverlib/rom_map.h
+.\usbdhandler.o: ..\driverlib/usb.h
+.\usbdhandler.o: ..\usblib/usblib.h
+.\usbdhandler.o: ..\usblib/usblibpriv.h
+.\usbdhandler.o: ..\usblib/device/usbdevice.h
+.\usbdhandler.o: ..\usblib/device/usbdevicepriv.h

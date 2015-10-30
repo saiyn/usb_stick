@@ -1,0 +1,10 @@
+.\usbdcdesc.o: device\usbdcdesc.c
+.\usbdcdesc.o: D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\usbdcdesc.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\usbdcdesc.o: ..\inc/hw_types.h
+.\usbdcdesc.o: ..\driverlib/debug.h
+.\usbdcdesc.o: ..\driverlib/usb.h
+.\usbdcdesc.o: ..\usblib/usblib.h
+.\usbdcdesc.o: ..\usblib/usblibpriv.h
+.\usbdcdesc.o: ..\usblib/device/usbdevice.h
+.\usbdcdesc.o: ..\usblib/device/usbdevicepriv.h

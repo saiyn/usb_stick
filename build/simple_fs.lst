@@ -1,0 +1,1823 @@
+L 1 "Application\simple_fs.c"
+N//*****************************************************************************
+N//
+N// simple_fs.c - Functions for simple FAT file system support
+N//
+N// Copyright (c) 2013 Texas Instruments Incorporated.  All rights reserved.
+N// Software License Agreement
+N// 
+N// Texas Instruments (TI) is supplying this software for use solely and
+N// exclusively on TI's microcontroller products. The software is owned by
+N// TI and/or its suppliers, and is protected under applicable copyright
+N// laws. You may not combine this software with "viral" open-source
+N// software in order to form a larger program.
+N// 
+N// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
+N// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+N// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+N// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
+N// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+N// DAMAGES, FOR ANY REASON WHATSOEVER.
+N// 
+N// This is part of revision 2.0.1.11577 of the DK-TM4C129X Firmware Package.
+N//
+N//*****************************************************************************
+N
+N#include <stdint.h>
+L 1 "D:\Keil\ARM\ARMCC\bin\..\include\stdint.h" 1
+N/* Copyright (C) ARM Ltd., 1999 */
+N/* All rights reserved */
+N
+N/*
+N * RCS $Revision: 178085 $
+N * Checkin $Date: 2012-12-11 14:54:17 +0000 (Tue, 11 Dec 2012) $
+N * Revising $Author: agrant $
+N */
+N
+N#ifndef __stdint_h
+N#define __stdint_h
+N#define __ARMCLIB_VERSION 5030076
+N
+N  #ifndef __STDINT_DECLS
+N  #define __STDINT_DECLS
+N
+N    #undef __CLIBNS
+N
+N    #ifdef __cplusplus
+S      namespace std {
+S          #define __CLIBNS std::
+S          extern "C" {
+N    #else
+N      #define __CLIBNS
+N    #endif  /* __cplusplus */
+N
+N
+N/*
+N * 'signed' is redundant below, except for 'signed char' and if
+N * the typedef is used to declare a bitfield.
+N * '__int64' is used instead of 'long long' so that this header
+N * can be used in --strict mode.
+N */
+N
+N    /* 7.18.1.1 */
+N
+N    /* exact-width signed integer types */
+Ntypedef   signed          char int8_t;
+Ntypedef   signed short     int int16_t;
+Ntypedef   signed           int int32_t;
+Ntypedef   signed       __int64 int64_t;
+N
+N    /* exact-width unsigned integer types */
+Ntypedef unsigned          char uint8_t;
+Ntypedef unsigned short     int uint16_t;
+Ntypedef unsigned           int uint32_t;
+Ntypedef unsigned       __int64 uint64_t;
+N
+N    /* 7.18.1.2 */
+N
+N    /* smallest type of at least n bits */
+N    /* minimum-width signed integer types */
+Ntypedef   signed          char int_least8_t;
+Ntypedef   signed short     int int_least16_t;
+Ntypedef   signed           int int_least32_t;
+Ntypedef   signed       __int64 int_least64_t;
+N
+N    /* minimum-width unsigned integer types */
+Ntypedef unsigned          char uint_least8_t;
+Ntypedef unsigned short     int uint_least16_t;
+Ntypedef unsigned           int uint_least32_t;
+Ntypedef unsigned       __int64 uint_least64_t;
+N
+N    /* 7.18.1.3 */
+N
+N    /* fastest minimum-width signed integer types */
+Ntypedef   signed           int int_fast8_t;
+Ntypedef   signed           int int_fast16_t;
+Ntypedef   signed           int int_fast32_t;
+Ntypedef   signed       __int64 int_fast64_t;
+N
+N    /* fastest minimum-width unsigned integer types */
+Ntypedef unsigned           int uint_fast8_t;
+Ntypedef unsigned           int uint_fast16_t;
+Ntypedef unsigned           int uint_fast32_t;
+Ntypedef unsigned       __int64 uint_fast64_t;
+N
+N    /* 7.18.1.4 integer types capable of holding object pointers */
+Ntypedef   signed           int intptr_t;
+Ntypedef unsigned           int uintptr_t;
+N
+N    /* 7.18.1.5 greatest-width integer types */
+Ntypedef   signed       __int64 intmax_t;
+Ntypedef unsigned       __int64 uintmax_t;
+N
+N
+N#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.2.1 */
+N
+N    /* minimum values of exact-width signed integer types */
+N#define INT8_MIN                   -128
+N#define INT16_MIN                -32768
+N#define INT32_MIN          (~0x7fffffff)   /* -2147483648 is unsigned */
+N#define INT64_MIN  __ESCAPE__(~0x7fffffffffffffffll) /* -9223372036854775808 is unsigned */
+N
+N    /* maximum values of exact-width signed integer types */
+N#define INT8_MAX                    127
+N#define INT16_MAX                 32767
+N#define INT32_MAX            2147483647
+N#define INT64_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum values of exact-width unsigned integer types */
+N#define UINT8_MAX                   255
+N#define UINT16_MAX                65535
+N#define UINT32_MAX           4294967295u
+N#define UINT64_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.2.2 */
+N
+N    /* minimum values of minimum-width signed integer types */
+N#define INT_LEAST8_MIN                   -128
+N#define INT_LEAST16_MIN                -32768
+N#define INT_LEAST32_MIN          (~0x7fffffff)
+N#define INT_LEAST64_MIN  __ESCAPE__(~0x7fffffffffffffffll)
+N
+N    /* maximum values of minimum-width signed integer types */
+N#define INT_LEAST8_MAX                    127
+N#define INT_LEAST16_MAX                 32767
+N#define INT_LEAST32_MAX            2147483647
+N#define INT_LEAST64_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum values of minimum-width unsigned integer types */
+N#define UINT_LEAST8_MAX                   255
+N#define UINT_LEAST16_MAX                65535
+N#define UINT_LEAST32_MAX           4294967295u
+N#define UINT_LEAST64_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.2.3 */
+N
+N    /* minimum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MIN           (~0x7fffffff)
+N#define INT_FAST16_MIN          (~0x7fffffff)
+N#define INT_FAST32_MIN          (~0x7fffffff)
+N#define INT_FAST64_MIN  __ESCAPE__(~0x7fffffffffffffffll)
+N
+N    /* maximum values of fastest minimum-width signed integer types */
+N#define INT_FAST8_MAX             2147483647
+N#define INT_FAST16_MAX            2147483647
+N#define INT_FAST32_MAX            2147483647
+N#define INT_FAST64_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum values of fastest minimum-width unsigned integer types */
+N#define UINT_FAST8_MAX            4294967295u
+N#define UINT_FAST16_MAX           4294967295u
+N#define UINT_FAST32_MAX           4294967295u
+N#define UINT_FAST64_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.2.4 */
+N
+N    /* minimum value of pointer-holding signed integer type */
+N#define INTPTR_MIN (~0x7fffffff)
+N
+N    /* maximum value of pointer-holding signed integer type */
+N#define INTPTR_MAX   2147483647
+N
+N    /* maximum value of pointer-holding unsigned integer type */
+N#define UINTPTR_MAX  4294967295u
+N
+N    /* 7.18.2.5 */
+N
+N    /* minimum value of greatest-width signed integer type */
+N#define INTMAX_MIN  __ESCAPE__(~0x7fffffffffffffffll)
+N
+N    /* maximum value of greatest-width signed integer type */
+N#define INTMAX_MAX  __ESCAPE__(9223372036854775807ll)
+N
+N    /* maximum value of greatest-width unsigned integer type */
+N#define UINTMAX_MAX __ESCAPE__(18446744073709551615ull)
+N
+N    /* 7.18.3 */
+N
+N    /* limits of ptrdiff_t */
+N#define PTRDIFF_MIN (~0x7fffffff)
+N#define PTRDIFF_MAX   2147483647
+N
+N    /* limits of sig_atomic_t */
+N#define SIG_ATOMIC_MIN (~0x7fffffff)
+N#define SIG_ATOMIC_MAX   2147483647
+N
+N    /* limit of size_t */
+N#define SIZE_MAX 4294967295u
+N
+N    /* limits of wchar_t */
+N    /* NB we have to undef and redef because they're defined in both
+N     * stdint.h and wchar.h */
+N#undef WCHAR_MIN
+N#undef WCHAR_MAX
+N
+N#if defined(__WCHAR32)
+X#if 0L
+S  #define WCHAR_MIN   0
+S  #define WCHAR_MAX   0xffffffffU
+N#else
+N  #define WCHAR_MIN   0
+N  #define WCHAR_MAX   65535
+N#endif
+N
+N    /* limits of wint_t */
+N#define WINT_MIN (~0x7fffffff)
+N#define WINT_MAX 2147483647
+N
+N#endif /* __STDC_LIMIT_MACROS */
+N
+N#if !defined(__cplusplus) || defined(__STDC_CONSTANT_MACROS)
+X#if !0L || 0L
+N
+N    /* 7.18.4.1 macros for minimum-width integer constants */
+N#define INT8_C(x)   (x)
+N#define INT16_C(x)  (x)
+N#define INT32_C(x)  (x)
+N#define INT64_C(x)  __ESCAPE__(x ## ll)
+N
+N#define UINT8_C(x)  (x ## u)
+N#define UINT16_C(x) (x ## u)
+N#define UINT32_C(x) (x ## u)
+N#define UINT64_C(x) __ESCAPE__(x ## ull)
+N
+N    /* 7.18.4.2 macros for greatest-width integer constants */
+N#define INTMAX_C(x)  __ESCAPE__(x ## ll)
+N#define UINTMAX_C(x) __ESCAPE__(x ## ull)
+N
+N#endif /* __STDC_CONSTANT_MACROS */
+N
+N    #ifdef __cplusplus
+S         }  /* extern "C" */
+S      }  /* namespace std */
+N    #endif /* __cplusplus */
+N  #endif /* __STDINT_DECLS */
+N
+N  #ifdef __cplusplus
+S    #ifndef __STDINT_NO_EXPORTS
+S      using ::std::int8_t;
+S      using ::std::int16_t;
+S      using ::std::int32_t;
+S      using ::std::int64_t;
+S      using ::std::uint8_t;
+S      using ::std::uint16_t;
+S      using ::std::uint32_t;
+S      using ::std::uint64_t;
+S      using ::std::int_least8_t;
+S      using ::std::int_least16_t;
+S      using ::std::int_least32_t;
+S      using ::std::int_least64_t;
+S      using ::std::uint_least8_t;
+S      using ::std::uint_least16_t;
+S      using ::std::uint_least32_t;
+S      using ::std::uint_least64_t;
+S      using ::std::int_fast8_t;
+S      using ::std::int_fast16_t;
+S      using ::std::int_fast32_t;
+S      using ::std::int_fast64_t;
+S      using ::std::uint_fast8_t;
+S      using ::std::uint_fast16_t;
+S      using ::std::uint_fast32_t;
+S      using ::std::uint_fast64_t;
+S      using ::std::intptr_t;
+S      using ::std::uintptr_t;
+S      using ::std::intmax_t;
+S      using ::std::uintmax_t;
+S    #endif 
+N  #endif /* __cplusplus */
+N
+N#endif /* __stdint_h */
+N
+N/* end of stdint.h */
+N
+N
+N
+L 26 "Application\simple_fs.c" 2
+N#include <stdbool.h>
+L 1 "D:\Keil\ARM\ARMCC\bin\..\include\stdbool.h" 1
+N/* stdbool.h: ISO/IEC 9899:1999 (C99), section 7.16 */
+N
+N/* Copyright (C) ARM Ltd., 2002
+N * All rights reserved
+N * RCS $Revision: 178085 $
+N * Checkin $Date: 2012-12-11 14:54:17 +0000 (Tue, 11 Dec 2012) $
+N * Revising $Author: drodgman $
+N */
+N
+N#ifndef __bool_true_false_are_defined
+N#define __bool_true_false_are_defined 1
+N#define __ARMCLIB_VERSION 5030076
+N
+N  #ifndef __cplusplus /* In C++, 'bool', 'true' and 'false' and keywords */
+N    #define bool _Bool
+N    #define true 1
+N    #define false 0
+N  #else
+S    #ifdef __GNUC__
+S      /* GNU C++ supports direct inclusion of stdbool.h to provide C99
+S         compatibility by defining _Bool */
+S      #define _Bool bool
+S    #endif
+N  #endif
+N
+N#endif /* __bool_true_false_are_defined */
+N
+L 27 "Application\simple_fs.c" 2
+N#include <string.h>
+L 1 "D:\Keil\ARM\ARMCC\bin\..\include\string.h" 1
+N/* string.h: ANSI 'C' (X3J11 Oct 88) library header, section 4.11 */
+N/* Copyright (C) Codemist Ltd., 1988-1993.                        */
+N/* Copyright 1991-1993 ARM Limited. All rights reserved.          */
+N/* version 0.04 */
+N
+N/*
+N * RCS $Revision: 178085 $
+N * Checkin $Date: 2012-12-11 14:54:17 +0000 (Tue, 11 Dec 2012) $
+N */
+N
+N/*
+N * string.h declares one type and several functions, and defines one macro
+N * useful for manipulating character arrays and other objects treated as
+N * character arrays. Various methods are used for determining the lengths of
+N * the arrays, but in all cases a char * or void * argument points to the
+N * initial (lowest addresses) character of the array. If an array is written
+N * beyond the end of an object, the behaviour is undefined.
+N */
+N
+N#ifndef __string_h
+N#define __string_h
+N#define __ARMCLIB_VERSION 5030076
+N
+N#define _ARMABI __declspec(__nothrow)
+N
+N  #ifndef __STRING_DECLS
+N  #define __STRING_DECLS
+N
+N    #undef __CLIBNS
+N
+N    #ifdef __cplusplus
+S        namespace std {
+S        #define __CLIBNS std::
+S        extern "C" {
+N    #else
+N      #define __CLIBNS
+N    #endif  /* __cplusplus */
+N
+N#if defined(__cplusplus) || !defined(__STRICT_ANSI__)
+X#if 0L || !0L
+N /* unconditional in C++ and non-strict C for consistency of debug info */
+N  typedef unsigned int size_t;
+N#elif !defined(__size_t)
+S  #define __size_t 1
+S  typedef unsigned int size_t;   /* see <stddef.h> */
+N#endif
+N
+N#undef NULL
+N#define NULL 0                   /* see <stddef.h> */
+N
+Nextern _ARMABI void *memcpy(void * __restrict /*s1*/,
+Xextern __declspec(__nothrow) void *memcpy(void * __restrict  ,
+N                    const void * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * copies n characters from the object pointed to by s2 into the object
+N    * pointed to by s1. If copying takes place between objects that overlap,
+N    * the behaviour is undefined.
+N    * Returns: the value of s1.
+N    */
+Nextern _ARMABI void *memmove(void * /*s1*/,
+Xextern __declspec(__nothrow) void *memmove(void *  ,
+N                    const void * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * copies n characters from the object pointed to by s2 into the object
+N    * pointed to by s1. Copying takes place as if the n characters from the
+N    * object pointed to by s2 are first copied into a temporary array of n
+N    * characters that does not overlap the objects pointed to by s1 and s2,
+N    * and then the n characters from the temporary array are copied into the
+N    * object pointed to by s1.
+N    * Returns: the value of s1.
+N    */
+Nextern _ARMABI char *strcpy(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strcpy(char * __restrict  , const char * __restrict  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * copies the string pointed to by s2 (including the terminating nul
+N    * character) into the array pointed to by s1. If copying takes place
+N    * between objects that overlap, the behaviour is undefined.
+N    * Returns: the value of s1.
+N    */
+Nextern _ARMABI char *strncpy(char * __restrict /*s1*/, const char * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strncpy(char * __restrict  , const char * __restrict  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * copies not more than n characters (characters that follow a null
+N    * character are not copied) from the array pointed to by s2 into the array
+N    * pointed to by s1. If copying takes place between objects that overlap,
+N    * the behaviour is undefined.
+N    * Returns: the value of s1.
+N    */
+N
+Nextern _ARMABI char *strcat(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strcat(char * __restrict  , const char * __restrict  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * appends a copy of the string pointed to by s2 (including the terminating
+N    * null character) to the end of the string pointed to by s1. The initial
+N    * character of s2 overwrites the null character at the end of s1.
+N    * Returns: the value of s1.
+N    */
+Nextern _ARMABI char *strncat(char * __restrict /*s1*/, const char * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strncat(char * __restrict  , const char * __restrict  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * appends not more than n characters (a null character and characters that
+N    * follow it are not appended) from the array pointed to by s2 to the end of
+N    * the string pointed to by s1. The initial character of s2 overwrites the
+N    * null character at the end of s1. A terminating null character is always
+N    * appended to the result.
+N    * Returns: the value of s1.
+N    */
+N
+N/*
+N * The sign of a nonzero value returned by the comparison functions is
+N * determined by the sign of the difference between the values of the first
+N * pair of characters (both interpreted as unsigned char) that differ in the
+N * objects being compared.
+N */
+N
+Nextern _ARMABI int memcmp(const void * /*s1*/, const void * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int memcmp(const void *  , const void *  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares the first n characters of the object pointed to by s1 to the
+N    * first n characters of the object pointed to by s2.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the object pointed to by s1 is greater than, equal to, or
+N    *          less than the object pointed to by s2.
+N    */
+Nextern _ARMABI int strcmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int strcmp(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares the string pointed to by s1 to the string pointed to by s2.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the string pointed to by s1 is greater than, equal to, or
+N    *          less than the string pointed to by s2.
+N    */
+Nextern _ARMABI int strncmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int strncmp(const char *  , const char *  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares not more than n characters (characters that follow a null
+N    * character are not compared) from the array pointed to by s1 to the array
+N    * pointed to by s2.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the string pointed to by s1 is greater than, equal to, or
+N    *          less than the string pointed to by s2.
+N    */
+Nextern _ARMABI int strcasecmp(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int strcasecmp(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares the string pointed to by s1 to the string pointed to by s2,
+N    * case-insensitively as defined by the current locale.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the string pointed to by s1 is greater than, equal to, or
+N    *          less than the string pointed to by s2.
+N    */
+Nextern _ARMABI int strncasecmp(const char * /*s1*/, const char * /*s2*/, size_t /*n*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int strncasecmp(const char *  , const char *  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares not more than n characters (characters that follow a null
+N    * character are not compared) from the array pointed to by s1 to the array
+N    * pointed to by s2, case-insensitively as defined by the current locale.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the string pointed to by s1 is greater than, equal to, or
+N    *          less than the string pointed to by s2.
+N    */
+Nextern _ARMABI int strcoll(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) int strcoll(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * compares the string pointed to by s1 to the string pointed to by s2, both
+N    * interpreted as appropriate to the LC_COLLATE category of the current
+N    * locale.
+N    * Returns: an integer greater than, equal to, or less than zero, according
+N    *          as the string pointed to by s1 is greater than, equal to, or
+N    *          less than the string pointed to by s2 when both are interpreted
+N    *          as appropriate to the current locale.
+N    */
+N
+Nextern _ARMABI size_t strxfrm(char * __restrict /*s1*/, const char * __restrict /*s2*/, size_t /*n*/) __attribute__((__nonnull__(2)));
+Xextern __declspec(__nothrow) size_t strxfrm(char * __restrict  , const char * __restrict  , size_t  ) __attribute__((__nonnull__(2)));
+N   /*
+N    * transforms the string pointed to by s2 and places the resulting string
+N    * into the array pointed to by s1. The transformation function is such that
+N    * if the strcmp function is applied to two transformed strings, it returns
+N    * a value greater than, equal to or less than zero, corresponding to the
+N    * result of the strcoll function applied to the same two original strings.
+N    * No more than n characters are placed into the resulting array pointed to
+N    * by s1, including the terminating null character. If n is zero, s1 is
+N    * permitted to be a null pointer. If copying takes place between objects
+N    * that overlap, the behaviour is undefined.
+N    * Returns: The length of the transformed string is returned (not including
+N    *          the terminating null character). If the value returned is n or
+N    *          more, the contents of the array pointed to by s1 are
+N    *          indeterminate.
+N    */
+N
+N
+N#ifdef __cplusplus
+Sextern _ARMABI const void *memchr(const void * /*s*/, int /*c*/, size_t /*n*/) __attribute__((__nonnull__(1)));
+Sextern "C++" void *memchr(void * __s, int __c, size_t __n) __attribute__((__nonnull__(1)));
+Sextern "C++" inline void *memchr(void * __s, int __c, size_t __n)
+S    { return const_cast<void *>(memchr(const_cast<const void *>(__s), __c, __n)); }
+N#else
+Nextern _ARMABI void *memchr(const void * /*s*/, int /*c*/, size_t /*n*/) __attribute__((__nonnull__(1)));
+Xextern __declspec(__nothrow) void *memchr(const void *  , int  , size_t  ) __attribute__((__nonnull__(1)));
+N#endif
+N   /*
+N    * locates the first occurence of c (converted to an unsigned char) in the
+N    * initial n characters (each interpreted as unsigned char) of the object
+N    * pointed to by s.
+N    * Returns: a pointer to the located character, or a null pointer if the
+N    *          character does not occur in the object.
+N    */
+N
+N#ifdef __cplusplus
+Sextern _ARMABI const char *strchr(const char * /*s*/, int /*c*/) __attribute__((__nonnull__(1)));
+Sextern "C++" char *strchr(char * __s, int __c) __attribute__((__nonnull__(1)));
+Sextern "C++" inline char *strchr(char * __s, int __c)
+S    { return const_cast<char *>(strchr(const_cast<const char *>(__s), __c)); }
+N#else
+Nextern _ARMABI char *strchr(const char * /*s*/, int /*c*/) __attribute__((__nonnull__(1)));
+Xextern __declspec(__nothrow) char *strchr(const char *  , int  ) __attribute__((__nonnull__(1)));
+N#endif
+N   /*
+N    * locates the first occurence of c (converted to an char) in the string
+N    * pointed to by s (including the terminating null character).
+N    * Returns: a pointer to the located character, or a null pointer if the
+N    *          character does not occur in the string.
+N    */
+N
+Nextern _ARMABI size_t strcspn(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) size_t strcspn(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * computes the length of the initial segment of the string pointed to by s1
+N    * which consists entirely of characters not from the string pointed to by
+N    * s2. The terminating null character is not considered part of s2.
+N    * Returns: the length of the segment.
+N    */
+N
+N#ifdef __cplusplus
+Sextern _ARMABI const char *strpbrk(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Sextern "C++" char *strpbrk(char * __s1, const char * __s2) __attribute__((__nonnull__(1,2)));
+Sextern "C++" inline char *strpbrk(char * __s1, const char * __s2)
+S    { return const_cast<char *>(strpbrk(const_cast<const char *>(__s1), __s2)); }
+N#else
+Nextern _ARMABI char *strpbrk(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strpbrk(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N#endif
+N   /*
+N    * locates the first occurence in the string pointed to by s1 of any
+N    * character from the string pointed to by s2.
+N    * Returns: returns a pointer to the character, or a null pointer if no
+N    *          character form s2 occurs in s1.
+N    */
+N
+N#ifdef __cplusplus
+Sextern _ARMABI const char *strrchr(const char * /*s*/, int /*c*/) __attribute__((__nonnull__(1)));
+Sextern "C++" char *strrchr(char * __s, int __c) __attribute__((__nonnull__(1)));
+Sextern "C++" inline char *strrchr(char * __s, int __c)
+S    { return const_cast<char *>(strrchr(const_cast<const char *>(__s), __c)); }
+N#else
+Nextern _ARMABI char *strrchr(const char * /*s*/, int /*c*/) __attribute__((__nonnull__(1)));
+Xextern __declspec(__nothrow) char *strrchr(const char *  , int  ) __attribute__((__nonnull__(1)));
+N#endif
+N   /*
+N    * locates the last occurence of c (converted to a char) in the string
+N    * pointed to by s. The terminating null character is considered part of
+N    * the string.
+N    * Returns: returns a pointer to the character, or a null pointer if c does
+N    *          not occur in the string.
+N    */
+N
+Nextern _ARMABI size_t strspn(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) size_t strspn(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * computes the length of the initial segment of the string pointed to by s1
+N    * which consists entirely of characters from the string pointed to by S2
+N    * Returns: the length of the segment.
+N    */
+N
+N#ifdef __cplusplus
+Sextern _ARMABI const char *strstr(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Sextern "C++" char *strstr(char * __s1, const char * __s2) __attribute__((__nonnull__(1,2)));
+Sextern "C++" inline char *strstr(char * __s1, const char * __s2)
+S    { return const_cast<char *>(strstr(const_cast<const char *>(__s1), __s2)); }
+N#else
+Nextern _ARMABI char *strstr(const char * /*s1*/, const char * /*s2*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) char *strstr(const char *  , const char *  ) __attribute__((__nonnull__(1,2)));
+N#endif
+N   /*
+N    * locates the first occurence in the string pointed to by s1 of the
+N    * sequence of characters (excluding the terminating null character) in the
+N    * string pointed to by s2.
+N    * Returns: a pointer to the located string, or a null pointer if the string
+N    *          is not found.
+N    */
+N
+Nextern _ARMABI char *strtok(char * __restrict /*s1*/, const char * __restrict /*s2*/) __attribute__((__nonnull__(2)));
+Xextern __declspec(__nothrow) char *strtok(char * __restrict  , const char * __restrict  ) __attribute__((__nonnull__(2)));
+Nextern _ARMABI char *_strtok_r(char * /*s1*/, const char * /*s2*/, char ** /*ptr*/) __attribute__((__nonnull__(2,3)));
+Xextern __declspec(__nothrow) char *_strtok_r(char *  , const char *  , char **  ) __attribute__((__nonnull__(2,3)));
+N#ifndef __STRICT_ANSI__
+Nextern _ARMABI char *strtok_r(char * /*s1*/, const char * /*s2*/, char ** /*ptr*/) __attribute__((__nonnull__(2,3)));
+Xextern __declspec(__nothrow) char *strtok_r(char *  , const char *  , char **  ) __attribute__((__nonnull__(2,3)));
+N#endif
+N   /*
+N    * A sequence of calls to the strtok function breaks the string pointed to
+N    * by s1 into a sequence of tokens, each of which is delimited by a
+N    * character from the string pointed to by s2. The first call in the
+N    * sequence has s1 as its first argument, and is followed by calls with a
+N    * null pointer as their first argument. The separator string pointed to by
+N    * s2 may be different from call to call.
+N    * The first call in the sequence searches for the first character that is
+N    * not contained in the current separator string s2. If no such character
+N    * is found, then there are no tokens in s1 and the strtok function returns
+N    * a null pointer. If such a character is found, it is the start of the
+N    * first token.
+N    * The strtok function then searches from there for a character that is
+N    * contained in the current separator string. If no such character is found,
+N    * the current token extends to the end of the string pointed to by s1, and
+N    * subsequent searches for a token will fail. If such a character is found,
+N    * it is overwritten by a null character, which terminates the current
+N    * token. The strtok function saves a pointer to the following character,
+N    * from which the next search for a token will start.
+N    * Each subsequent call, with a null pointer as the value for the first
+N    * argument, starts searching from the saved pointer and behaves as
+N    * described above.
+N    * Returns: pointer to the first character of a token, or a null pointer if
+N    *          there is no token.
+N    *
+N    * strtok_r() is a common extension which works exactly like
+N    * strtok(), but instead of storing its state in a hidden
+N    * library variable, requires the user to pass in a pointer to a
+N    * char * variable which will be used instead. Any sequence of
+N    * calls to strtok_r() passing the same char ** pointer should
+N    * behave exactly like the corresponding sequence of calls to
+N    * strtok(). This means that strtok_r() can safely be used in
+N    * multi-threaded programs, and also that you can tokenise two
+N    * strings in parallel.
+N    */
+N
+Nextern _ARMABI void *memset(void * /*s*/, int /*c*/, size_t /*n*/) __attribute__((__nonnull__(1)));
+Xextern __declspec(__nothrow) void *memset(void *  , int  , size_t  ) __attribute__((__nonnull__(1)));
+N   /*
+N    * copies the value of c (converted to an unsigned char) into each of the
+N    * first n charactes of the object pointed to by s.
+N    * Returns: the value of s.
+N    */
+Nextern _ARMABI char *strerror(int /*errnum*/);
+Xextern __declspec(__nothrow) char *strerror(int  );
+N   /*
+N    * maps the error number in errnum to an error message string.
+N    * Returns: a pointer to the string, the contents of which are
+N    *          implementation-defined. The array pointed to shall not be
+N    *          modified by the program, but may be overwritten by a
+N    *          subsequent call to the strerror function.
+N    */
+Nextern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+Xextern __declspec(__nothrow) size_t strlen(const char *  ) __attribute__((__nonnull__(1)));
+N   /*
+N    * computes the length of the string pointed to by s.
+N    * Returns: the number of characters that precede the terminating null
+N    *          character.
+N    */
+N
+Nextern _ARMABI size_t strlcpy(char * /*dst*/, const char * /*src*/, size_t /*len*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) size_t strlcpy(char *  , const char *  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * copies the string src into the string dst, using no more than
+N    * len bytes of dst. Always null-terminates dst _within the
+N    * length len (i.e. will copy at most len-1 bytes of string plus
+N    * a NUL), unless len is actually zero.
+N    * 
+N    * Return value is the length of the string that _would_ have
+N    * been written, i.e. the length of src. Thus, the operation
+N    * succeeded without truncation if and only if ret < len;
+N    * otherwise, the value in ret tells you how big to make dst if
+N    * you decide to reallocate it. (That value does _not_ include
+N    * the NUL.)
+N    * 
+N    * This is a BSD-derived library extension, which we are
+N    * permitted to declare in a standard header because ISO defines
+N    * function names beginning with 'str' as reserved for future
+N    * expansion of <string.h>.
+N    */
+N
+Nextern _ARMABI size_t strlcat(char * /*dst*/, const char * /*src*/, size_t /*len*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) size_t strlcat(char *  , const char *  , size_t  ) __attribute__((__nonnull__(1,2)));
+N   /*
+N    * concatenates the string src to the string dst, using no more
+N    * than len bytes of dst. Always null-terminates dst _within the
+N    * length len (i.e. will copy at most len-1 bytes of string plus
+N    * a NUL), unless len is actually zero.
+N    * 
+N    * Return value is the length of the string that _would_ have
+N    * been written, i.e. the length of src plus the original length
+N    * of dst. Thus, the operation succeeded without truncation if
+N    * and only if ret < len; otherwise, the value in ret tells you
+N    * how big to make dst if you decide to reallocate it. (That
+N    * value does _not_ include the NUL.)
+N    * 
+N    * If no NUL is encountered within the first len bytes of dst,
+N    * then the length of dst is considered to have been equal to
+N    * len for the purposes of the return value (as if there were a
+N    * NUL at dst[len]). Thus, the return value in this case is len
+N    * + strlen(src).
+N    * 
+N    * This is a BSD-derived library extension, which we are
+N    * permitted to declare in a standard header because ISO defines
+N    * function names beginning with 'str' as reserved for future
+N    * expansion of <string.h>.
+N    */
+N
+Nextern _ARMABI void _membitcpybl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpybl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitcpybb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpybb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitcpyhl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpyhl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitcpyhb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpyhb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitcpywl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpywl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitcpywb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitcpywb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovebl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovebl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovebb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovebb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovehl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovehl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovehb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovehb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovewl(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovewl(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+Nextern _ARMABI void _membitmovewb(void * /*dest*/, const void * /*src*/, int /*destoffset*/, int /*srcoffset*/, size_t /*nbits*/) __attribute__((__nonnull__(1,2)));
+Xextern __declspec(__nothrow) void _membitmovewb(void *  , const void *  , int  , int  , size_t  ) __attribute__((__nonnull__(1,2)));
+N    /*
+N     * Copies or moves a piece of memory from one place to another,
+N     * with one-bit granularity. So you can start or finish a copy
+N     * part way through a byte, and you can copy between regions
+N     * with different alignment within a byte.
+N     * 
+N     * All these functions have the same prototype: two void *
+N     * pointers for destination and source, then two integers
+N     * giving the bit offset from those pointers, and finally the
+N     * number of bits to copy.
+N     * 
+N     * Just like memcpy and memmove, the "cpy" functions copy as
+N     * fast as they can in the assumption that the memory regions
+N     * do not overlap, while the "move" functions cope correctly
+N     * with overlap.
+N     *
+N     * Treating memory as a stream of individual bits requires
+N     * defining a convention about what order those bits are
+N     * considered to be arranged in. The above functions support
+N     * multiple conventions:
+N     * 
+N     *  - the "bl" functions consider the unit of memory to be the
+N     *    byte, and consider the bits within each byte to be
+N     *    arranged in little-endian fashion, so that the LSB comes
+N     *    first. (For example, membitcpybl(a,b,0,7,1) would copy
+N     *    the MSB of the byte at b to the LSB of the byte at a.)
+N     * 
+N     *  - the "bb" functions consider the unit of memory to be the
+N     *    byte, and consider the bits within each byte to be
+N     *    arranged in big-endian fashion, so that the MSB comes
+N     *    first.
+N     * 
+N     *  - the "hl" functions consider the unit of memory to be the
+N     *    16-bit halfword, and consider the bits within each word
+N     *    to be arranged in little-endian fashion.
+N     * 
+N     *  - the "hb" functions consider the unit of memory to be the
+N     *    16-bit halfword, and consider the bits within each word
+N     *    to be arranged in big-endian fashion.
+N     * 
+N     *  - the "wl" functions consider the unit of memory to be the
+N     *    32-bit word, and consider the bits within each word to be
+N     *    arranged in little-endian fashion.
+N     * 
+N     *  - the "wb" functions consider the unit of memory to be the
+N     *    32-bit word, and consider the bits within each word to be
+N     *    arranged in big-endian fashion.
+N     */
+N
+N    #ifdef __cplusplus
+S         }  /* extern "C" */
+S      }  /* namespace std */
+N    #endif /* __cplusplus */
+N  #endif /* __STRING_DECLS */
+N
+N  #ifdef __cplusplus
+S    #ifndef __STRING_NO_EXPORTS
+S      using ::std::size_t;
+S      using ::std::memcpy;
+S      using ::std::memmove;
+S      using ::std::strcpy;
+S      using ::std::strncpy;
+S      using ::std::strcat;
+S      using ::std::strncat;
+S      using ::std::memcmp;
+S      using ::std::strcmp;
+S      using ::std::strncmp;
+S      using ::std::strcasecmp;
+S      using ::std::strncasecmp;
+S      using ::std::strcoll;
+S      using ::std::strxfrm;
+S      using ::std::memchr;
+S      using ::std::strchr;
+S      using ::std::strcspn;
+S      using ::std::strpbrk;
+S      using ::std::strrchr;
+S      using ::std::strspn;
+S      using ::std::strstr;
+S      using ::std::strtok;
+S#ifndef __STRICT_ANSI__
+S      using ::std::strtok_r;
+S#endif
+S      using ::std::_strtok_r;
+S      using ::std::memset;
+S      using ::std::strerror;
+S      using ::std::strlen;
+S      using ::std::strlcpy;
+S      using ::std::strlcat;
+S      using ::std::_membitcpybl;
+S      using ::std::_membitcpybb;
+S      using ::std::_membitcpyhl;
+S      using ::std::_membitcpyhb;
+S      using ::std::_membitcpywl;
+S      using ::std::_membitcpywb;
+S      using ::std::_membitmovebl;
+S      using ::std::_membitmovebb;
+S      using ::std::_membitmovehl;
+S      using ::std::_membitmovehb;
+S      using ::std::_membitmovewl;
+S      using ::std::_membitmovewb;
+S    #endif /* __STRING_NO_EXPORTS */
+N  #endif /* __cplusplus */
+N
+N#endif
+N
+N/* end of string.h */
+N
+L 28 "Application\simple_fs.c" 2
+N#include "simple_fs.h"
+L 1 "Application\simple_fs.h" 1
+N//*****************************************************************************
+N//
+N// simple_fs.h - Header for simple FAT file system support
+N//
+N// Copyright (c) 2013 Texas Instruments Incorporated.  All rights reserved.
+N// Software License Agreement
+N// 
+N// Texas Instruments (TI) is supplying this software for use solely and
+N// exclusively on TI's microcontroller products. The software is owned by
+N// TI and/or its suppliers, and is protected under applicable copyright
+N// laws. You may not combine this software with "viral" open-source
+N// software in order to form a larger program.
+N// 
+N// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
+N// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+N// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+N// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
+N// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+N// DAMAGES, FOR ANY REASON WHATSOEVER.
+N// 
+N// This is part of revision 2.0.1.11577 of the DK-TM4C129X Firmware Package.
+N//
+N//*****************************************************************************
+N
+N#ifndef __SIMPLE_FS_H__
+N#define __SIMPLE_FS_H__
+N
+N//*****************************************************************************
+N//
+N// \addtogroup simple_fs_api
+N// @{
+N//
+N//*****************************************************************************
+N
+N//*****************************************************************************
+N//
+N// Macro to read a single sector from a file that was opened with
+N// SimpleFsOpen()
+N//
+N// This convenience macro maps to the function SimpleFsGetNextFileSector()
+N// called with a parameter of 0.  It should be used to read successive
+N// sectors from a file after the file has been opened with SimpleFsOpen().
+N//
+N// When a sector is read, it is loaded into the sector buffer that was passed
+N// when SimpleFsInit() was called.
+N//
+N// A non-zero value will be returned to the caller as int32_t as successive
+N// sectors are successfully read into the sector buffer.  At the end of the
+N// file, or if there is any error, then a value of 0 is returned.
+N//
+N// Note that the a whole sector is always loaded, even if the end of
+N// a file does not fill the last sector.  It is the responsibility of the
+N// caller to track the file size and to deal with a partially full last
+N// sector.
+N//
+N// \return Non-zero if a sector was read into the sector buffer, or
+N// 0 if there are no more sectors or if any error occurred.
+N//
+N//*****************************************************************************
+N#define SimpleFsReadFileSector() SimpleFsGetNextFileSector(0)
+N
+N//*****************************************************************************
+N//
+N// Read a single sector from the application-specific storage device into
+N// the sector buffer.
+N//
+N// \param ui32Sector is the absolute sector number to read from the storage
+N// device
+N// \param pui8SectorBuf is a pointer to a 512 byte buffer where the sector
+N// data should be written
+N//
+N// This function is used by the simple file system functions to read a sector
+N// of data from a storage device.  It must be implemented as part of the
+N// application specific code.  For example, it could be used to read sectors
+N// from a USB mass storage device, or from an SD card, or any device that can
+N// be used to store a FAT file system.  Note that the sector size is always
+N// assumed to be 512 bytes.
+N//
+N// \return Zero value if a sector of data was successfully read from the
+N// device and stored in the sector buffer, non-zero if not successful.
+N//
+N//*****************************************************************************
+N//
+N// This function to be supplied by the client
+N//
+Nextern uint32_t SimpleFsReadMediaSector(uint32_t ui32Sector,
+N                                        uint8_t *pui8SectorBuf);
+N
+N//*****************************************************************************
+N//
+N// Close the Doxygen group.
+N// @}
+N//
+N//*****************************************************************************
+N
+N//*****************************************************************************
+N//
+N// Functions to help with accessing the FAT file system on a storage device
+N//
+N//****************************************************************************
+Nextern uint32_t SimpleFsInit(uint8_t *pui8SectorBuf);
+Nextern uint32_t SimpleFsOpen(char *pcName83);
+Nextern uint32_t SimpleFsGetNextFileSector(uint32_t ui32StartCluster);
+N
+N#endif // __SIMPLE_FS_H__
+L 29 "Application\simple_fs.c" 2
+N
+N//*****************************************************************************
+N//
+N// \addtogroup simple_fs_api
+N// @{
+N//
+N// This file system API should be used as follows:
+N// - Initialize it by calling SimpleFsInit().  You must supply a pointer to a
+N// 512 byte buffer that will be used for storing device sector data.
+N// - "Open" a file by calling SimpleFsOpen() and passing the 8.3-style filename
+N// as an 11-character string.
+N// - Read successive sectors from the file by using the convenience macro
+N// SimpleFsReadFileSector().
+N//
+N// This API does not use any file handles so there is no way to open more than
+N// one file at a time.  There is also no random access into the file, each
+N// sector must be read in sequence.
+N//
+N// The client of this API supplies a 512-byte buffer for storage of data read
+N// from the device.  But this file also maintains an additional, internal
+N// 512-byte buffer used for caching FAT sectors.  This minimizes the amount
+N// of device reads required to fetch cluster chain entries from the FAT.
+N//
+N// The application code (the client) must also provide a function used for
+N// reading sectors from the storage device, whatever it may be.  This allows
+N// the code in this file to be independent of the type of device used for
+N// storing the file system.  The name of the function is
+N// SimpleFsReadMediaSector().
+N//
+N//*****************************************************************************
+N
+N//*****************************************************************************
+N//
+N// Setup a macro for handling packed data structures.
+N//
+N//*****************************************************************************
+N#if defined(ccs) ||                                                           \
+N    defined(codered) ||                                                       \
+N    defined(gcc) ||                                                           \
+N    defined(rvmdk) ||                                                         \
+N    defined(__ARMCC_VERSION) ||                                               \
+N    defined(sourcerygxx)
+X#if 0L ||                                                               0L ||                                                           0L ||                                                               1L ||                                                             1L ||                                                   0L
+N#define PACKED                  __attribute__((packed))
+N#elif defined(ewarm)
+S#define PACKED
+S#else
+S#error "Unrecognized COMPILER!"
+N#endif
+N
+N//*****************************************************************************
+N//
+N// Instruct the IAR compiler to pack the following structures.
+N//
+N//*****************************************************************************
+N#ifdef ewarm
+S#pragma pack(1)
+N#endif
+N
+N//*****************************************************************************
+N//
+N// Structures for mapping FAT file system
+N//
+N//*****************************************************************************
+N
+N//*****************************************************************************
+N//
+N// The FAT16 boot sector extension
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint8_t ui8DriveNumber;
+N    uint8_t ui8Reserved;
+N    uint8_t ui8ExtSig;
+N    uint32_t ui32Serial;
+N    char pcVolumeLabel[11];
+N    char pcFsType[8];
+N    uint8_t ui8BootCode[448];
+N    uint16_t ui16Sig;
+N}
+NPACKED tBootExt16;
+X__attribute__((packed)) tBootExt16;
+N
+N//*****************************************************************************
+N//
+N// The FAT32 boot sector extension
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint32_t ui32SectorsPerFAT;
+N    uint16_t ui16Flags;
+N    uint16_t ui16Version;
+N    uint32_t ui32RootCluster;
+N    uint16_t ui16InfoSector;
+N    uint16_t ui16BootCopy;
+N    uint8_t ui8Reserved[12];
+N    uint8_t ui8DriveNumber;
+N    uint8_t ui8Reserved1;
+N    uint8_t ui8ExtSig;
+N    uint32_t ui32Serial;
+N    char pcVolumeLabel[11];
+N    char pcFsType[8];
+N    uint8_t ui8BootCode[420];
+N    uint16_t ui16Sig;
+N}
+NPACKED tBootExt32;
+X__attribute__((packed)) tBootExt32;
+N
+N//*****************************************************************************
+N//
+N// The FAT16/32 boot sector main section
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint8_t ui8Jump[3];
+N    uint8_t i8OEMName[8];
+N    uint16_t ui16BytesPerSector;
+N    uint8_t ui8SectorsPerCluster;
+N    uint16_t ui16ReservedSectors;
+N    uint8_t ui8NumFATs;
+N    uint16_t ui16NumRootEntries;
+N    uint16_t ui16TotalSectorsSmall;
+N    uint8_t ui8MediaDescriptor;
+N    uint16_t ui16SectorsPerFAT;
+N    uint16_t ui16SectorsPerTrack;
+N    uint16_t ui16NumberHeads;
+N    uint32_t ui32HiddenSectors;
+N    uint32_t ui32TotalSectorsBig;
+N    union
+N    {
+N        tBootExt16 sExt16;
+N        tBootExt32 sExt32;
+N    }
+N    PACKED ext;
+X    __attribute__((packed)) ext;
+N}
+NPACKED tBootSector;
+X__attribute__((packed)) tBootSector;
+N
+N//*****************************************************************************
+N//
+N// The partition table
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint8_t ui8Status;
+N    uint8_t ui8CHSFirst[3];
+N    uint8_t ui8Type;
+N    uint8_t ui8CHSLast[3];
+N    uint32_t ui32FirstSector;
+N    uint32_t ui32NumBlocks;
+N}
+NPACKED tPartitionTable;
+X__attribute__((packed)) tPartitionTable;
+N
+N//*****************************************************************************
+N//
+N// The master boot record (MBR)
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint8_t ui8CodeArea[440];
+N    uint8_t ui8DiskSignature[4];
+N    uint8_t ui8Nulls[2];
+N    tPartitionTable sPartTable[4];
+N    uint16_t ui16Sig;
+N}
+NPACKED tMasterBootRecord;
+X__attribute__((packed)) tMasterBootRecord;
+N
+N//*****************************************************************************
+N//
+N// The structure for a single directory entry
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    char    pcFileName[11];
+N    uint8_t ui8Attr;
+N    uint8_t ui8Reserved;
+N    uint8_t ui8CreateTime[5];
+N    uint8_t ui8LastDate[2];
+N    uint16_t ui16ClusterHi;
+N    uint8_t ui8LastModified[4];
+N    uint16_t ui16Cluster;
+N    uint32_t ui32FileSize;
+N}
+NPACKED tDirEntry;
+X__attribute__((packed)) tDirEntry;
+N
+N//*****************************************************************************
+N//
+N// Tell the IAR compiler that the remaining structures do not need to be
+N// packed.
+N//
+N//*****************************************************************************
+N#ifdef ewarm
+S#pragma pack()
+N#endif
+N
+N//*****************************************************************************
+N//
+N// This structure holds information about the layout of the file system
+N//
+N//*****************************************************************************
+Ntypedef struct
+N{
+N    uint32_t ui32FirstSector;
+N    uint32_t ui32NumBlocks;
+N    uint16_t ui16SectorsPerCluster;
+N    uint16_t ui16MaxRootEntries;
+N    uint32_t ui32SectorsPerFAT;
+N    uint32_t ui32FirstFATSector;
+N    uint32_t ui32LastFATSector;
+N    uint32_t ui32FirstDataSector;
+N    uint32_t ui32Type;
+N    uint32_t ui32StartRootDir;
+N}
+NtPartitionInfo;
+N
+Nstatic tPartitionInfo sPartInfo;
+N
+N//*****************************************************************************
+N//
+N// A pointer to the client provided sector buffer.
+N//
+N//*****************************************************************************
+Nstatic uint8_t *g_pui8SectorBuf;
+N
+N//*****************************************************************************
+N//
+N// Initializes the simple file system
+N//
+N// \param pui8SectorBuf is a pointer to a caller supplied 512-byte buffer
+N// that will be used for holding sectors that are loaded from the media
+N// storage device.
+N//
+N// Reads the MBR, partition table, and boot record to find the logical
+N// structure of the file system.  This function stores the file system
+N// structural data internally so that the remaining functions of the API
+N// can read the file system.
+N//
+N// To read data from the storage device, the function SimpleFsReadMediaSector()
+N// will be called.  This function is not implemented here but must be
+N// implemented by the user of this simple file system.
+N//
+N// This file system support is extremely simple-minded.  It will only
+N// find the first partition of a FAT16 or FAT32 formatted mass storage
+N// device.  Only very minimal error checking is performed in order to save
+N// code space.
+N//
+N// \return Zero if successful, non-zero if there was an error.
+N//
+N//*****************************************************************************
+Nuint32_t
+NSimpleFsInit(uint8_t *pui8SectorBuf)
+N{
+N    tMasterBootRecord *pMBR;
+N    tPartitionTable *pPart;
+N    tBootSector *pBoot;
+N
+N    //
+N    // Save the sector buffer pointer.  The input parameter is assumed
+N    // to be good.
+N    //
+N    g_pui8SectorBuf = pui8SectorBuf;
+N
+N    //
+N    // Get the MBR
+N    //
+N    if(SimpleFsReadMediaSector(0, pui8SectorBuf))
+N    {
+N        return(1);
+N    }
+N
+N    //
+N    // Verify MBR signature - bare minimum validation of MBR.
+N    //
+N    pMBR = (tMasterBootRecord *)pui8SectorBuf;
+N    if(pMBR->ui16Sig != 0xAA55)
+N    {
+N        return(1);
+N    }
+N
+N    //
+N    // See if this is a MBR or a boot sector.
+N    //
+N    pBoot = (tBootSector *)pui8SectorBuf;
+N    if((strncmp(pBoot->ext.sExt16.pcFsType, "FAT", 3) != 0) &&
+N       (strncmp(pBoot->ext.sExt32.pcFsType, "FAT32", 5) != 0))
+N    {
+N        //
+N        // Get the first partition table
+N        //
+N        pPart = &(pMBR->sPartTable[0]);
+N
+N        //
+N        // Could optionally check partition type here ...
+N        //
+N
+N        //
+N        // Get the partition location and size
+N        //
+N        sPartInfo.ui32FirstSector = pPart->ui32FirstSector;
+N        sPartInfo.ui32NumBlocks = pPart->ui32NumBlocks;
+N
+N        //
+N        // Read the boot sector from the partition
+N        //
+N        if(SimpleFsReadMediaSector(sPartInfo.ui32FirstSector, pui8SectorBuf))
+N        {
+N            return(1);
+N        }
+N    }
+N    else
+N    {
+N        //
+N        // Extract the number of sectors from the boot sector.
+N        //
+N        sPartInfo.ui32FirstSector = 0;
+N        if(pBoot->ui16TotalSectorsSmall == 0)
+N        {
+N            sPartInfo.ui32NumBlocks = pBoot->ui32TotalSectorsBig;
+N        }
+N        else
+N        {
+N            sPartInfo.ui32NumBlocks = pBoot->ui16TotalSectorsSmall;
+N        }
+N    }
+N
+N    //
+N    // Get pointer to the boot sector
+N    //
+N    if(pBoot->ext.sExt16.ui16Sig != 0xAA55)
+N    {
+N        return(1);
+N    }
+N
+N    //
+N    // Verify the sector size is 512.  We can't deal with anything else
+N    //
+N    if(pBoot->ui16BytesPerSector != 512)
+N    {
+N        return(1);
+N    }
+N
+N    //
+N    // Extract some info from the boot record
+N    //
+N    sPartInfo.ui16SectorsPerCluster = pBoot->ui8SectorsPerCluster;
+N    sPartInfo.ui16MaxRootEntries = pBoot->ui16NumRootEntries;
+N
+N    //
+N    // Decide if we are dealing with FAT16 or FAT32.
+N    // If number of root entries is 0, that suggests FAT32
+N    //
+N    if(sPartInfo.ui16MaxRootEntries == 0)
+N    {
+N        //
+N        // Confirm FAT 32 signature in the expected place
+N        //
+N        if(!strncmp(pBoot->ext.sExt32.pcFsType, "FAT32   ", 8))
+N        {
+N            sPartInfo.ui32Type = 32;
+N        }
+N        else
+N        {
+N            return(1);
+N        }
+N    }
+N    //
+N    // Root entries is non-zero, suggests FAT16
+N    //
+N    else
+N    {
+N        //
+N        // Confirm FAT16 signature
+N        //
+N        if(!strncmp(pBoot->ext.sExt16.pcFsType, "FAT16   ", 8))
+N        {
+N            sPartInfo.ui32Type = 16;
+N        }
+N        else
+N        {
+N            return(1);
+N        }
+N    }
+N
+N    //
+N    // Find the beginning of the FAT, in absolute sectors
+N    //
+N    sPartInfo.ui32FirstFATSector = sPartInfo.ui32FirstSector +
+N                                 pBoot->ui16ReservedSectors;
+N
+N    //
+N    // Find the end of the FAT in absolute sectors.  FAT16 and 32
+N    // are handled differently.
+N    //
+N    sPartInfo.ui32SectorsPerFAT = (sPartInfo.ui32Type == 16) ?
+N                                pBoot->ui16SectorsPerFAT :
+N                                pBoot->ext.sExt32.ui32SectorsPerFAT;
+N    sPartInfo.ui32LastFATSector = sPartInfo.ui32FirstFATSector +
+N                                sPartInfo.ui32SectorsPerFAT - 1;
+N
+N    //
+N    // Find the start of the root directory and the data area.
+N    // For FAT16, the root will be stored as an absolute sector number
+N    // For FAT32, the root will be stored as the starting cluster of the root
+N    // The data area start is the absolute first sector of the data area.
+N    //
+N    if(sPartInfo.ui32Type == 16)
+N    {
+N        sPartInfo.ui32StartRootDir = sPartInfo.ui32FirstFATSector +
+N                                   (sPartInfo.ui32SectorsPerFAT *
+N                                    pBoot->ui8NumFATs);
+N        sPartInfo.ui32FirstDataSector = sPartInfo.ui32StartRootDir +
+N                                      (sPartInfo.ui16MaxRootEntries / 16);
+N    }
+N    else
+N    {
+N        sPartInfo.ui32StartRootDir = pBoot->ext.sExt32.ui32RootCluster;
+N        sPartInfo.ui32FirstDataSector = sPartInfo.ui32FirstFATSector +
+N                            (sPartInfo.ui32SectorsPerFAT * pBoot->ui8NumFATs);
+N    }
+N
+N    //
+N    // At this point the file system has been initialized, so return
+N    // success to the caller.
+N    //
+N    return(0);
+N}
+N
+N//*****************************************************************************
+N//
+N// Find the next cluster in a FAT chain
+N//
+N// \param ui32ThisCluster is the current cluster in the chain
+N//
+N// Reads the File Allocation Table (FAT) of the file system to find the
+N// next cluster in a chain of clusters.  The current cluster is passed in
+N// and the next cluster in the chain will be returned.
+N//
+N// This function reads sectors from the storage device as needed in order
+N// to parse the FAT tables.  Error handling is minimal since there is not
+N// much that can be done if an error is encountered.  If any error is
+N// encountered, or if this is the last cluster in the chain, then 0 is
+N// returned.  This signals the caller to stop traversing the chain (either
+N// due to error or end of chain).
+N//
+N// The function maintains a cache of a single sector from the FAT.  It only
+N// reads in a new FAT sector if the requested cluster is not in the
+N// currently cached sector.
+N//
+N// \return Next cluster number if successful, 0 if this is the last cluster
+N// or any error is found.
+N//
+N//*****************************************************************************
+Nstatic uint32_t
+NSimpleFsGetNextCluster(uint_fast32_t ui32ThisCluster)
+N{
+N    static uint8_t ui8FATCache[512];
+N    static uint_fast32_t ui32CachedFATSector = (uint32_t)-1;
+N    uint_fast32_t ui32ClustersPerFATSector;
+N    uint_fast32_t ui32ClusterIdx;
+N    uint_fast32_t ui32FATSector;
+N    uint_fast32_t ui32NextCluster;
+N    uint_fast32_t ui32MaxCluster;
+N
+N    //
+N    // Compute the maximum possible reasonable cluster number
+N    //
+N    ui32MaxCluster = sPartInfo.ui32NumBlocks / sPartInfo.ui16SectorsPerCluster;
+N
+N    //
+N    // Make sure cluster input number is reasonable.  If not then return
+N    // 0 indicating error.
+N    //
+N    if((ui32ThisCluster < 2) || (ui32ThisCluster > ui32MaxCluster))
+N    {
+N        return(0);
+N    }
+N
+N    //
+N    // Compute the index of the requested cluster within the sector.
+N    // Also compute the sector number within the FAT that contains the
+N    // entry for the requested cluster.
+N    //
+N    ui32ClustersPerFATSector = (sPartInfo.ui32Type == 16) ? 256 : 128;
+N    ui32ClusterIdx = ui32ThisCluster % ui32ClustersPerFATSector;
+N    ui32FATSector = ui32ThisCluster / ui32ClustersPerFATSector;
+N
+N    //
+N    // Check to see if the FAT sector we need is already cached
+N    //
+N    if(ui32FATSector != ui32CachedFATSector)
+N    {
+N        //
+N        // FAT sector we need is not cached, so read it in
+N        //
+N        if(SimpleFsReadMediaSector(sPartInfo.ui32FirstFATSector + ui32FATSector,
+N                                 ui8FATCache) != 0)
+N        {
+N            //
+N            // There was an error so mark cache as unavailable and return
+N            // an error.
+N            //
+N            ui32CachedFATSector = (uint32_t)-1;
+N            return(0);
+N        }
+N
+N        //
+N        // Remember which FAT sector was just loaded into the cache.
+N        //
+N        ui32CachedFATSector = ui32FATSector;
+N    }
+N
+N    //
+N    // Now look up the next cluster value from the cached sector, using this
+N    // requested cluster as an index. It needs to be indexed as 16 or 32
+N    // bit values depending on whether it is FAT16 or 32
+N    // If the cluster value means last cluster, then return 0
+N    //
+N    if(sPartInfo.ui32Type == 16)
+N    {
+N        ui32NextCluster = ((uint16_t *)ui8FATCache)[ui32ClusterIdx];
+N        if(ui32NextCluster >= 0xFFF8)
+N        {
+N            return(0);
+N        }
+N    }
+N    else
+N    {
+N        ui32NextCluster = ((uint32_t *)ui8FATCache)[ui32ClusterIdx];
+N        if(ui32NextCluster >= 0x0FFFFFF8)
+N        {
+N            return(0);
+N        }
+N    }
+N
+N    //
+N    // Check new cluster value to make sure it is reasonable.  If not then
+N    // return 0 to indicate an error.
+N    //
+N    if((ui32NextCluster >= 2) && (ui32NextCluster <= ui32MaxCluster))
+N    {
+N        return(ui32NextCluster);
+N    }
+N    else
+N    {
+N        return(0);
+N    }
+N}
+N
+N//*****************************************************************************
+N//
+N// Read a single sector from a file into the sector buffer
+N//
+N// \param ui32StartCluster is the first cluster of the file, used to
+N// initialize the file read.  Use 0 for successive sectors.
+N//
+N// Reads sectors in sequence from a file and stores the data in the sector
+N// buffer that was passed in the initial call to SimpleFsInit().  The function
+N// is initialized with the file to read by passing the starting cluster of
+N// the file.  The function will initialize some static data and return.  It
+N// does not read any file data when passed a starting cluster (and
+N// returns 0 - this is normal).
+N//
+N// Once the function has been initialized with the file's starting cluster,
+N// then successive calls should be made, passing a value of 0 for the
+N// cluster number.  This tells the function to read the next sector from the
+N// file and store it in the sector buffer.  The function remembers the last
+N// sector that was read, and each time it is called with a cluster value of
+N// 0, it will read the next sector.  The function will traverse the FAT
+N// chain as needed to read all the sectors.  When a sector has been
+N// successfully read from a file, the function will return non-zero.  When
+N// there are no more sectors to read, or any error is encountered, the
+N// function will return 0.
+N//
+N// Note that the function always reads a whole sector, even if the end of
+N// a file does not fill the last sector.  It is the responsibility of the
+N// caller to track the file size and to deal with a partially full last
+N// sector.
+N//
+N// \return Non-zero if a sector was read into the sector buffer, or
+N// 0 if there are no more sectors or if any error occurred.
+N//
+N//*****************************************************************************
+Nuint32_t
+NSimpleFsGetNextFileSector(uint_fast32_t ui32StartCluster)
+N{
+N    static uint_fast32_t ui32WorkingCluster = 0;
+N    static uint_fast32_t ui32WorkingSector;
+N    uint_fast32_t ui32ReadSector;
+N
+N    //
+N    // If user specified starting cluster, then init the working cluster
+N    // and sector values
+N    //
+N    if(ui32StartCluster)
+N    {
+N        ui32WorkingCluster = ui32StartCluster;
+N        ui32WorkingSector = 0;
+N        return(0);
+N    }
+N
+N    //
+N    // Otherwise, make sure there is a valid working cluster already
+N    //
+N    else if(ui32WorkingCluster == 0)
+N    {
+N        return(0);
+N    }
+N
+N    //
+N    // If the current working sector is the same as sectors per cluster,
+N    // then that means that the next cluster needs to be loaded.
+N    //
+N    if(ui32WorkingSector == sPartInfo.ui16SectorsPerCluster)
+N    {
+N        //
+N        // Get the next cluster in the chain for this file.
+N        //
+N        ui32WorkingCluster = SimpleFsGetNextCluster(ui32WorkingCluster);
+N
+N        //
+N        // If the next cluster is valid, then reset the working sector
+N        //
+N        if(ui32WorkingCluster)
+N        {
+N            ui32WorkingSector = 0;
+N        }
+N
+N        //
+N        // Next cluster is not valid, or this was the end of the chain.
+N        // Clear the working cluster and return an indication that no new
+N        // sector data was loaded.
+N        //
+N        else
+N        {
+N            ui32WorkingCluster = 0;
+N            return(0);
+N        }
+N    }
+N
+N    //
+N    // Calculate the sector to read from.  It is the sector of the start
+N    // of the working cluster, plus the working sector (the sector within
+N    // the cluster), plus the offset to the start of the data area.
+N    // Note that the cluster needs to be reduced by 2 in order to index
+N    // properly into the data area.  That is a feature of FAT file system.
+N    //
+N    ui32ReadSector = (ui32WorkingCluster - 2) * sPartInfo.ui16SectorsPerCluster;
+N    ui32ReadSector += ui32WorkingSector;
+N    ui32ReadSector += sPartInfo.ui32FirstDataSector;
+N
+N    //
+N    // Attempt to read the next sector from the cluster.  If not successful,
+N    // then clear the working cluster and return a non-success indication.
+N    //
+N    if(SimpleFsReadMediaSector(ui32ReadSector, g_pui8SectorBuf) != 0)
+N    {
+N        ui32WorkingCluster = 0;
+N        return(0);
+N    }
+N    else
+N    {
+N        //
+N        // Read was successful.  Increment to the next sector of the cluster
+N        // and return a success indication.
+N        //
+N        ui32WorkingSector++;
+N        return(1);
+N    }
+N}
+N
+N//*****************************************************************************
+N//
+N// Find a file in the root directory of the file system and open it for
+N// reading.
+N//
+N// \param pcName83 is an 11-character string that represents the 8.3 file
+N// name of the file to open.
+N//
+N// This function traverses the root directory of the file system to find
+N// the file name specified by the caller.  Note that the file name must be
+N// an 8.3 file name that is 11 characters int32_t.  The first 8 characters are
+N// the base name and the last 3 characters are the extension.  If there are
+N// fewer characters in the base name or extension, the name should be padded
+N// with spaces.  For example "myfile.bn" has fewer than 11 characters, and
+N// should be passed with padding like this: "myfile  bn ".  Note the extra
+N// spaces, and that the dot ('.') is not part of the string that is passed
+N// to this function.
+N//
+N// If the file is found, then it initializes the file for reading, and returns
+N// the file length.  The file can be read by making successive calls to
+N// SimpleFsReadFileSector().
+N//
+N// The function only searches the root directory and ignores any
+N// subdirectories.  It also ignores any int32_t file name entries, looking only
+N// at the 8.3 file name for a match.
+N//
+N// \return The size of the file if it is found, or 0 if the file could not
+N// be found.
+N//
+N//*****************************************************************************
+Nuint32_t
+NSimpleFsOpen(char *pcName83)
+N{
+N    tDirEntry *pDirEntry;
+N    uint_fast32_t ui32DirSector;
+N    uint_fast32_t ui32FirstCluster;
+N
+N    //
+N    // Find starting root dir sector, only used for FAT16
+N    // If FAT32 then this is the first cluster of root dir
+N    //
+N    ui32DirSector = sPartInfo.ui32StartRootDir;
+N
+N    //
+N    // For FAT32, root dir is like a file, so init a file read of the root dir
+N    //
+N    if(sPartInfo.ui32Type == 32)
+N    {
+N        SimpleFsGetNextFileSector(ui32DirSector);
+N    }
+N
+N    //
+N    // Search the root directory entry for the firmware file
+N    //
+N    while(1)
+N    {
+N        //
+N        // Read in a directory block.
+N        //
+N        if(sPartInfo.ui32Type == 16)
+N        {
+N            //
+N            // For FAT16, read in a sector of the root directory
+N            //
+N            if(SimpleFsReadMediaSector(ui32DirSector, g_pui8SectorBuf))
+N            {
+N                return(0);
+N            }
+N        }
+N        else
+N        {
+N            //
+N            // For FAT32, the root directory is treated like a file.
+N            // The root directory sector will be loaded into the sector buf
+N            //
+N            if(SimpleFsGetNextFileSector(0) == 0)
+N            {
+N                return(0);
+N            }
+N        }
+N
+N        //
+N        // Initialize the directory entry pointer to the first entry of
+N        // this sector.
+N        //
+N        pDirEntry = (tDirEntry *)g_pui8SectorBuf;
+N
+N        //
+N        // Iterate through all the directory entries in this sector
+N        //
+N        while((uint8_t *)pDirEntry < &g_pui8SectorBuf[512])
+N        {
+N            //
+N            // If the 8.3 filename of this entry matches the firmware
+N            // file name, then we have a match, so return a pointer to
+N            // this entry.
+N            //
+N            if(!strncmp(pDirEntry->pcFileName, pcName83, 11))
+N            {
+N                //
+N                // Compute the starting cluster of the file
+N                //
+N                ui32FirstCluster = pDirEntry->ui16Cluster;
+N                if(sPartInfo.ui32Type == 32)
+N                {
+N                    //
+N                    // For FAT32, add in the upper word of the
+N                    // starting cluster number
+N                    //
+N                    ui32FirstCluster += pDirEntry->ui16ClusterHi << 16;
+N                }
+N
+N                //
+N                // Initialize the start of the file
+N                //
+N                SimpleFsGetNextFileSector(ui32FirstCluster);
+N                return(pDirEntry->ui32FileSize);
+N            }
+N
+N            //
+N            // Advance to the next entry in this sector.
+N            //
+N            pDirEntry++;
+N        }
+N
+N        //
+N        // Need to get the next sector in the directory.  Handled
+N        // differently depending on if this is FAT16 or 32
+N        //
+N        if(sPartInfo.ui32Type == 16)
+N        {
+N            //
+N            // FAT16: advance sectors as int32_t as there are more possible
+N            // entries.
+N            //
+N            sPartInfo.ui16MaxRootEntries -= 512 / 32;
+N            if(sPartInfo.ui16MaxRootEntries)
+N            {
+N                ui32DirSector++;
+N            }
+N            else
+N            {
+N                //
+N                // Ran out of directory entries and didn't find the file,
+N                // so return a null.
+N                //
+N                return(0);
+N            }
+N        }
+N        else
+N        {
+N            //
+N            // FAT32: there is nothing to compute here.  The next root
+N            // dir sector will be fetched at the top of the loop
+N            //
+N        }
+N    }
+N}
+N
+N//*****************************************************************************
+N//
+N// Close the Doxygen group.
+N// @}
+N//
+N//*****************************************************************************

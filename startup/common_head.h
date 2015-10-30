@@ -42,6 +42,7 @@ enum
 #include "hw_types.h"
 #include "hw_gpio.h"
 #include "hw_ssi.h"
+#include "udma.h"
 #include "interrupt.h"
 #include "tm4c1290nczad.h"
 

@@ -15,6 +15,7 @@
 .\build\main.o: .\inc\hw_types.h
 .\build\main.o: .\inc\hw_gpio.h
 .\build\main.o: .\inc\hw_ssi.h
+.\build\main.o: .\driverlib\udma.h
 .\build\main.o: .\driverlib\interrupt.h
 .\build\main.o: .\inc\tm4c1290nczad.h
 .\build\main.o: .\startup\sys_database.h
@@ -35,3 +36,4 @@
 .\build\main.o: Application\serial.h
 .\build\main.o: .\Task\System_Task.h
 .\build\main.o: .\Task\Display_Task.h
+.\build\main.o: Application\usb_stick.h

@@ -92,6 +92,7 @@ __heap_limit
 		;EXTERN  IR_receive_route
 		;EXTERN  Timer1IntHandler
 		;EXTERN  IR_IN_receive_route
+		EXTERN  USB0HostIntHandler
 
 ;******************************************************************************
 ;
@@ -158,7 +159,7 @@ __Vectors
         DCD     IntDefaultHandler           ; CAN1
         DCD     IntDefaultHandler      ; Ethernet
         DCD     IntDefaultHandler           ; Hibernate
-        DCD     IntDefaultHandler           ; USB0
+        DCD     USB0HostIntHandler           ; USB0
         DCD     IntDefaultHandler           ; PWM Generator 3
         DCD     IntDefaultHandler           ; uDMA Software Transfer
         DCD     IntDefaultHandler           ; uDMA Error

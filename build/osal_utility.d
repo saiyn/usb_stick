@@ -15,6 +15,7 @@
 .\build\osal_utility.o: .\inc\hw_types.h
 .\build\osal_utility.o: .\inc\hw_gpio.h
 .\build\osal_utility.o: .\inc\hw_ssi.h
+.\build\osal_utility.o: .\driverlib\udma.h
 .\build\osal_utility.o: .\driverlib\interrupt.h
 .\build\osal_utility.o: .\inc\tm4c1290nczad.h
 .\build\osal_utility.o: .\startup\sys_database.h
